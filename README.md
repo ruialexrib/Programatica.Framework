@@ -6,7 +6,7 @@ This is a base lib framework that helps any .netcore developer to start programm
 ## Available Features
 - Base Object
 - Base DbContext, ready to be injected
-- Usefull model extensions
+- Useful model extensions
 - Pré installed system models
 - Base Generic Repository, ready to be injected
 - Base Service, with a list of injected event handlers.
