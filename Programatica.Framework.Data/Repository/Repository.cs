@@ -17,6 +17,7 @@ namespace Programatica.Framework.Data.Repository
         public Repository(IDbContext context) : base()
         {
             _context = context;
+            _context.Database.EnsureCreated();
         }
 
         protected DbSet<T> DbSet
