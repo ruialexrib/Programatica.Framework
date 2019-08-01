@@ -3008,11 +3008,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
+      "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
       "projectName": "Programatica.Framework.Data",
-      "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
+      "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
       "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Data\\obj\\",
+      "outputPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3032,8 +3032,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
+            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
             }
           }
         }

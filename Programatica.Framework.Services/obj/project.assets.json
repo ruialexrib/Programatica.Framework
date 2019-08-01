@@ -3027,11 +3027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",
-      "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
+      "outputPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3051,11 +3051,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
+            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
             },
-            "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
+            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
             }
           }
         }

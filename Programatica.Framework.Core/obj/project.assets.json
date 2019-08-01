@@ -731,11 +731,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
+      "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
       "projectName": "Programatica.Framework.Core",
-      "projectPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
+      "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
       "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\OneDrive\\Workspace\\_netcore2\\Programatica.Framework\\Programatica.Framework.Core\\obj\\",
+      "outputPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
