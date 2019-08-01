@@ -26,3 +26,17 @@ C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programa
 C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.csproj.CopyComplete
 C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.dll
 C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.pdb
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Services.deps.json
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Services.dll
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Services.pdb
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Core.dll
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Data.dll
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Core.pdb
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\bin\Debug\netcoreapp2.2\Programatica.Framework.Data.pdb
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.csprojAssemblyReference.cache
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.csproj.CoreCompileInputs.cache
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.AssemblyInfoInputs.cache
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.AssemblyInfo.cs
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.csproj.CopyComplete
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.dll
+C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Services\obj\Debug\netcoreapp2.2\Programatica.Framework.Services.pdb
