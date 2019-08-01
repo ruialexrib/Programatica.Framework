@@ -16,7 +16,7 @@ namespace Programatica.Framework.Services.Handlers
         private readonly IAuthUserAdapter _authUserAdapter;
         private readonly IJsonSerializerAdapter _jsonSerializerAdapter;
         private readonly IRepository<T> _modelRepository;
-        private readonly IRepository<TrackChange> _trackChangesRepository;
+        private readonly IService<TrackChange> _trackChangesService;
 
         public AuditEventHandler(
             IRepository<Audit> auditRepository,
@@ -24,14 +24,14 @@ namespace Programatica.Framework.Services.Handlers
             IAuthUserAdapter authUserAdapter,
             IJsonSerializerAdapter jsonSerializerAdapter,
             IRepository<T> modelRepository,
-            IRepository<TrackChange> trackChangesRepository)
+            IService<TrackChange> trackChangesService)
         {
             _auditRepository = auditRepository;
             _dateTimeAdapter = dateTimeAdapter;
             _authUserAdapter = authUserAdapter;
             _jsonSerializerAdapter = jsonSerializerAdapter;
             _modelRepository = modelRepository;
-            _trackChangesRepository = trackChangesRepository;
+            _trackChangesService = trackChangesService;
         }
 
         public void OnAfterCreated(T model)
@@ -105,7 +105,7 @@ namespace Programatica.Framework.Services.Handlers
 
             foreach (var change in changes)
             {
-                _trackChangesRepository.Insert(new TrackChange
+                _trackChangesService.Create(new TrackChange
                 {
                     AuditId = auditId,
                     FieldName = change.Prop,
