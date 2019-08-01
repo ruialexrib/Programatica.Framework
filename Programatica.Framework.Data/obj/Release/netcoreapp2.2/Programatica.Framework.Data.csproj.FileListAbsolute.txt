@@ -1,0 +1,12 @@
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\bin\Release\netcoreapp2.2\Programatica.Framework.Data.deps.json
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\bin\Release\netcoreapp2.2\Programatica.Framework.Data.dll
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\bin\Release\netcoreapp2.2\Programatica.Framework.Data.pdb
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\bin\Release\netcoreapp2.2\Programatica.Framework.Core.dll
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\bin\Release\netcoreapp2.2\Programatica.Framework.Core.pdb
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.csprojAssemblyReference.cache
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.csproj.CoreCompileInputs.cache
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.AssemblyInfoInputs.cache
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.AssemblyInfo.cs
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.csproj.CopyComplete
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.dll
+C:\Users\ruiribeiro\OneDrive\Workspace\_netcore2\Programatica.Framework\Programatica.Framework.Data\obj\Release\netcoreapp2.2\Programatica.Framework.Data.pdb
