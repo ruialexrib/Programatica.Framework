@@ -1,5 +1,6 @@
-# Created by https://www.gitignore.io/api/csharp,visualstudio
-# Edit at https://www.gitignore.io/?templates=csharp,visualstudio
+
+# Created by https://www.gitignore.io/api/csharp,dotnetcore,visualstudio
+# Edit at https://www.gitignore.io/?templates=csharp,dotnetcore,visualstudio
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -342,9 +343,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
-<<<<<<< HEAD
-*.cache
-=======
 
 # Local History for Visual Studio
 .localhistory/
@@ -354,6 +352,16 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+### DotnetCore ###
+# .NET Core build folders
+/bin
+/obj
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
 
 ### VisualStudio ###
 
@@ -511,5 +519,4 @@ MigrationBackup/
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
-# End of https://www.gitignore.io/api/csharp,visualstudio
->>>>>>> 154327c16149785abd639ebe84808a609d134aa8
+# End of https://www.gitignore.io/api/csharp,dotnetcore,visualstudio
