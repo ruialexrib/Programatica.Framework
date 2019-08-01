@@ -1,2 +1,2 @@
 # Programatica.Framework
-.net core application development bootstrap 
+.net core application development bootstrap framework
