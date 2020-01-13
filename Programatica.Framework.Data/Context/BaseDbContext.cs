@@ -40,6 +40,9 @@ namespace Programatica.Framework.Data.Context
             return base.Set<TModel>();
         }
 
+        /// <summary>
+        /// Saves all changes made in this context to the database.
+        /// </summary>
         public override int SaveChanges()
         {
             var changeSet = ChangeTracker.Entries();
