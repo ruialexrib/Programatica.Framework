@@ -5,7 +5,7 @@ using Programatica.Framework.Core;
 
 namespace Programatica.Framework.Data.Context
 {
-    public interface IDbContext : IObject
+    public interface IDbContext /*: IObject*/
     {
         DatabaseFacade Database { get; }
 

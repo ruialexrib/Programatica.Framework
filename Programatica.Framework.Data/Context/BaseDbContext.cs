@@ -11,20 +11,20 @@ namespace Programatica.Framework.Data.Context
         public Guid InstanceSystemId { get; set; }
         public DateTime InstanceDateTime { get; set; }
 
-        public string GetCallerMemberName([CallerMemberName] string callingMember = null)
-        {
-            return callingMember;
-        }
+        //public string GetCallerMemberName([CallerMemberName] string callingMember = null)
+        //{
+        //    return callingMember;
+        //}
 
-        public string GetCallerFilePath([CallerFilePath] string callingFile = null)
-        {
-            return callingFile;
-        }
+        //public string GetCallerFilePath([CallerFilePath] string callingFile = null)
+        //{
+        //    return callingFile;
+        //}
 
-        public int GetCallerLineNumber([CallerLineNumber] int callingLineNum = 0)
-        {
-            return callingLineNum;
-        }
+        //public int GetCallerLineNumber([CallerLineNumber] int callingLineNum = 0)
+        //{
+        //    return callingLineNum;
+        //}
 
         public DbSet<Audit> Audit { get; set; }
         public DbSet<TrackChange> TrackChanges { get; set; }
