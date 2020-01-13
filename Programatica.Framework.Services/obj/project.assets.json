@@ -3039,21 +3039,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ruiribeiro\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ruiribeiro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",
-      "projectPath": "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectPath": "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
+      "outputPath": "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\ruiribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3068,11 +3064,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
+            "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
             },
-            "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\WORKSPACE\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
+            "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\Source\\Repos\\ruialexrib\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
             }
           }
         }
