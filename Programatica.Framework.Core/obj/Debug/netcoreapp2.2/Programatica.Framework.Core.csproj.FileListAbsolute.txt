@@ -35,8 +35,8 @@ C:\Users\ruiribeiro\Source\Repos\ruialexrib\Programatica.Framework\Programatica.
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\bin\Debug\netcoreapp2.2\Programatica.Framework.Core.deps.json
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\bin\Debug\netcoreapp2.2\Programatica.Framework.Core.dll
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\bin\Debug\netcoreapp2.2\Programatica.Framework.Core.pdb
-C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.csprojAssemblyReference.cache
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.AssemblyInfoInputs.cache
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.AssemblyInfo.cs
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.dll
 C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.pdb
+C:\Users\ruiribeiro\Documents\WORKSPACE\Programatica.Framework\Programatica.Framework.Core\obj\Debug\netcoreapp2.2\Programatica.Framework.Core.csprojAssemblyReference.cache

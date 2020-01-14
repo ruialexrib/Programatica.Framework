@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>.netcore development bootstrap framework</Description>
+    <Copyright>2020 - Programatica</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
+    <Version>1.0.1</Version>
+    <Authors>ruialexrib</Authors>
+    <Company>Programatica</Company>
   </PropertyGroup>
 
   <ItemGroup>
