@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Programatica.Framework.Core;
 using Programatica.Framework.Data.Models;
 using System;
 using System.Linq;
@@ -6,25 +7,25 @@ using System.Runtime.CompilerServices;
 
 namespace Programatica.Framework.Data.Context
 {
-    public abstract class BaseDbContext : DbContext, IDbContext
+    public abstract class BaseDbContext : DbContext, IDbContext, IObject
     {
         public Guid InstanceSystemId { get; set; }
         public DateTime InstanceDateTime { get; set; }
 
-        //public string GetCallerMemberName([CallerMemberName] string callingMember = null)
-        //{
-        //    return callingMember;
-        //}
+        public string GetCallerMemberName([CallerMemberName] string callingMember = null)
+        {
+            return callingMember;
+        }
 
-        //public string GetCallerFilePath([CallerFilePath] string callingFile = null)
-        //{
-        //    return callingFile;
-        //}
+        public string GetCallerFilePath([CallerFilePath] string callingFile = null)
+        {
+            return callingFile;
+        }
 
-        //public int GetCallerLineNumber([CallerLineNumber] int callingLineNum = 0)
-        //{
-        //    return callingLineNum;
-        //}
+        public int GetCallerLineNumber([CallerLineNumber] int callingLineNum = 0)
+        {
+            return callingLineNum;
+        }
 
         public DbSet<Audit> Audit { get; set; }
         public DbSet<TrackChange> TrackChanges { get; set; }
