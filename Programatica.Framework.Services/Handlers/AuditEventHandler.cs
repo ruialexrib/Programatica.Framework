@@ -14,7 +14,6 @@ namespace Programatica.Framework.Services.Handlers
         private readonly IRepository<Audit> _auditRepository;
         private readonly IDateTimeAdapter _dateTimeAdapter;
         private readonly IAuthUserAdapter _authUserAdapter;
-        private readonly IJsonSerializerAdapter _jsonSerializerAdapter;
         private readonly IRepository<T> _modelRepository;
         private readonly IService<TrackChange> _trackChangesService;
 
@@ -22,14 +21,12 @@ namespace Programatica.Framework.Services.Handlers
             IRepository<Audit> auditRepository,
             IDateTimeAdapter dateTimeAdapter,
             IAuthUserAdapter authUserAdapter,
-            IJsonSerializerAdapter jsonSerializerAdapter,
             IRepository<T> modelRepository,
             IService<TrackChange> trackChangesService)
         {
             _auditRepository = auditRepository;
             _dateTimeAdapter = dateTimeAdapter;
             _authUserAdapter = authUserAdapter;
-            _jsonSerializerAdapter = jsonSerializerAdapter;
             _modelRepository = modelRepository;
             _trackChangesService = trackChangesService;
         }

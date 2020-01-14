@@ -12,7 +12,7 @@ namespace Programatica.Framework.Services
     {
         protected internal readonly IInjector<T> _injector;
 
-        public Service(IInjector<T> injector) :base()
+        public Service(IInjector<T> injector) : base()
         {
             _injector = injector;
         }
