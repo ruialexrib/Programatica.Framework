@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Programatica.Framework.Services.Injector
 {
-    public interface IInjector<T> : IObject
+    public interface IInjector<T> 
         where T : IModel
     {
         IRepository<T> TRepository { get; set; }

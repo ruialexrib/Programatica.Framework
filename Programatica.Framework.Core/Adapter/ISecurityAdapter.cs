@@ -1,6 +1,6 @@
 ﻿namespace Programatica.Framework.Core.Adapter
 {
-    public interface ISecurityAdapter : IObject
+    public interface ISecurityAdapter 
     {
         PasswordStrength GetPasswordStrength(string password);
     }

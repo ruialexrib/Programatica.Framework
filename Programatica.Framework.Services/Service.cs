@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Programatica.Framework.Services
 {
-    public class Service<T> : BaseObject, IService<T>
+    public class Service<T> : IService<T>
         where T : IModel
     {
         protected internal readonly IInjector<T> _injector;

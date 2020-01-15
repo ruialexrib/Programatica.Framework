@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Programatica.Framework.Services.Handlers
 {
-    public class AuditEventHandler<T> : BaseObject, IEventHandler<T>
+    public class AuditEventHandler<T> : IEventHandler<T>
                     where T : IModel
     {
         private readonly IRepository<Audit> _auditRepository;

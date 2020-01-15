@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Programatica.Framework.Services
 {
-    public interface IService<T> : IObject, IDisposable
+    public interface IService<T> : IDisposable
         where T : IModel
     {
         T Create(T model);

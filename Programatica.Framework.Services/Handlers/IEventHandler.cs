@@ -3,7 +3,7 @@ using Programatica.Framework.Data.Models;
 
 namespace Programatica.Framework.Services.Handlers
 {
-    public interface IEventHandler<T> : IObject
+    public interface IEventHandler<T> 
         where T : IModel
     {
         void OnBeforeCreating(T model);

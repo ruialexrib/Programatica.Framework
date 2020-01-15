@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace Programatica.Framework.Data.Repository
 {
-    public class Repository<T> : BaseObject, IRepository<T>, IDisposable
+    public class Repository<T> : IRepository<T>, IDisposable
         where T : class, IModel
     {
         protected readonly IDbContext _context;

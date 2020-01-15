@@ -2,7 +2,7 @@
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public interface IAuthUserAdapter : IObject
+    public interface IAuthUserAdapter 
     {
         string Name { get; }
         string Password { get; }

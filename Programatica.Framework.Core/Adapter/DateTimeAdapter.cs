@@ -2,7 +2,7 @@
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public class DateTimeAdapter : BaseObject, IDateTimeAdapter
+    public class DateTimeAdapter : IDateTimeAdapter
     {
         public DateTimeAdapter() : base()
         { }

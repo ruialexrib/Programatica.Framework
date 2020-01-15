@@ -4,7 +4,7 @@ using System;
 
 namespace Programatica.Framework.Data.Models
 {
-    public abstract class BaseModel : BaseObject, IModel
+    public abstract class BaseModel : IModel
     {
         [NotTrackable]
         public Guid SystemId { get; set; }

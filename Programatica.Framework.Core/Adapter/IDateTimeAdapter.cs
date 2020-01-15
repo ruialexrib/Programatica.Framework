@@ -2,7 +2,7 @@
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public interface IDateTimeAdapter : IObject
+    public interface IDateTimeAdapter 
     {
         DateTime UtcNow { get; }
     }

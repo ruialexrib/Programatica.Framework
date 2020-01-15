@@ -3,7 +3,7 @@ using System;
 
 namespace Programatica.Framework.Data.Models
 {
-    public interface IModel : IObject
+    public interface IModel 
     {
         Guid SystemId { get; set; }
         int Id { get; set; }

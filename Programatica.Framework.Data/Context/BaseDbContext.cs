@@ -7,33 +7,13 @@ using System.Runtime.CompilerServices;
 
 namespace Programatica.Framework.Data.Context
 {
-    public abstract class BaseDbContext : DbContext, IDbContext, IObject
+    public abstract class BaseDbContext : DbContext, IDbContext
     {
-        public Guid InstanceSystemId { get; set; }
-        public DateTime InstanceDateTime { get; set; }
-
-        public string GetCallerMemberName([CallerMemberName] string callingMember = null)
-        {
-            return callingMember;
-        }
-
-        public string GetCallerFilePath([CallerFilePath] string callingFile = null)
-        {
-            return callingFile;
-        }
-
-        public int GetCallerLineNumber([CallerLineNumber] int callingLineNum = 0)
-        {
-            return callingLineNum;
-        }
-
         public DbSet<Audit> Audit { get; set; }
         public DbSet<TrackChange> TrackChanges { get; set; }
 
         public BaseDbContext(DbContextOptions options) : base(options)
         {
-            InstanceSystemId = Guid.NewGuid();
-            InstanceDateTime = DateTime.UtcNow;
         }
 
         DbSet<TModel> IDbContext.Set<TModel>()

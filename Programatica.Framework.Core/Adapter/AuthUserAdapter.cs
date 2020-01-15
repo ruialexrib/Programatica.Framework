@@ -2,7 +2,7 @@
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public class AuthUserAdapter : BaseObject, IAuthUserAdapter
+    public class AuthUserAdapter : IAuthUserAdapter
     {
         public AuthUserAdapter() : base()
         { }

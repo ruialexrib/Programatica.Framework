@@ -2,7 +2,7 @@
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public class JsonSerializerAdapter : BaseObject, IJsonSerializerAdapter
+    public class JsonSerializerAdapter : IJsonSerializerAdapter
     {
         public string Serialize(dynamic model)
         {

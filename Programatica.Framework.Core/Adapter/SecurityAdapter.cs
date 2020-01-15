@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Programatica.Framework.Core.Adapter
 {
-    public class SecurityAdapter : BaseObject, ISecurityAdapter
+    public class SecurityAdapter : ISecurityAdapter
     {
         public SecurityAdapter() : base()
         { }

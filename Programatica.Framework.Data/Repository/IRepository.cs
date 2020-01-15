@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace Programatica.Framework.Data.Repository
 {
-    public interface IRepository<T> : IObject, IDisposable
+    public interface IRepository<T> : IDisposable
         where T : IModel
     {
         IQueryable<T> GetData();
