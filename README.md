@@ -1,3 +1,5 @@
+https://programaticasoftware.visualstudio.com/Programatica.Framework/_apis/build/status/ruialexrib.Programatica.Framework?branchName=master
+
 # Programatica Framework
 .netcore development bootstrap framework
 
