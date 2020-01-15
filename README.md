@@ -1,5 +1,6 @@
 [![Build Status](https://programaticasoftware.visualstudio.com/Programatica.Framework/_apis/build/status/ruialexrib.Programatica.Framework?branchName=master)](https://programaticasoftware.visualstudio.com/Programatica.Framework/_build/latest?definitionId=12&branchName=master)
 
+
 # Programatica Framework
 .netcore development bootstrap framework
 
