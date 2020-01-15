@@ -1,4 +1,4 @@
-# Programatica.Framework
+# Programatica Framework
 .netcore development bootstrap framework
 
 This is a base lib framework that helps any .netcore developer to start programming a new application with a lot of features already enabled. 
