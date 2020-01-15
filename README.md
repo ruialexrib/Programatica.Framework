@@ -1,7 +1,7 @@
 [![Build Status](https://programaticasoftware.visualstudio.com/Programatica.Framework/_apis/build/status/ruialexrib.Programatica.Framework?branchName=master)](https://programaticasoftware.visualstudio.com/Programatica.Framework/_build/latest?definitionId=12&branchName=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/ruialexrib/Programatica.Framework) ![GitHub top language](https://img.shields.io/github/languages/top/ruialexrib/Programatica.Framework) ![GitHub All Releases](https://img.shields.io/github/downloads/ruialexrib/Programatica.Framework/total)
 
 # Programatica Framework
-.netcore development bootstrap framework
+Dotnetcore development framework accelarator
 
 This is a base lib framework that helps any .netcore developer to start programming a new application with a lot of features already enabled. 
 
