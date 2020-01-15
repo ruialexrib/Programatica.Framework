@@ -1,5 +1,4 @@
-[![Build Status](https://programaticasoftware.visualstudio.com/Programatica.Framework/_apis/build/status/ruialexrib.Programatica.Framework?branchName=master)](https://programaticasoftware.visualstudio.com/Programatica.Framework/_build/latest?definitionId=12&branchName=master)
-
+[![Build Status](https://programaticasoftware.visualstudio.com/Programatica.Framework/_apis/build/status/ruialexrib.Programatica.Framework?branchName=master)](https://programaticasoftware.visualstudio.com/Programatica.Framework/_build/latest?definitionId=12&branchName=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Programatica Framework
 .netcore development bootstrap framework
