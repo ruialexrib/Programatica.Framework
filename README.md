@@ -5,14 +5,13 @@
 
 This is a base lib framework that helps any .netcore developer to start programming a new application with a lot of features already enabled. 
 
-## Programatica.Framework.Core
-![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Core)
+## Main Components
 
-## Programatica.Framework.Data
-![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Data)
-
-## Programatica.Framework.Services
-![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Services)
+| Assembly Name  | Nuget Version |
+| ------------- | ------------- |
+| Programatica.Framework.Core | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Core) |
+| Programatica.Framework.Data | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Data) |
+| Programatica.Framework.Services | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Services) |
 
 ### Available Features
 - Base Object
