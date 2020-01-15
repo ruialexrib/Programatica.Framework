@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Core", "Programatica.Framework.Core\Programatica.Framework.Core.csproj", "{9EE81EAD-2874-4AE7-AAAC-AC62F32ABC2A}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Services", "Programatica.Framework.Services\Programatica.Framework.Services.csproj", "{421B0547-AEA9-4FB9-9438-ECEEE3261F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programatica.Framework.Tests", "Programatica.Framework.Tests\Programatica.Framework.Tests.csproj", "{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Tests", "Programatica.Framework.Tests\Programatica.Framework.Tests.csproj", "{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{33C12C79-063F-4084-A2A7-9B0FC9AD2691}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAE6D8C0-7D27-44BE-9E80-73CBC748D331} = {33C12C79-063F-4084-A2A7-9B0FC9AD2691}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DE542C1-86D3-460C-BBDD-C91090F5FE08}

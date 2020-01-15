@@ -384,7 +384,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Programatica.Framework.Core/1.0.1": {
+      "Programatica.Framework.Core/1.0.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2"
@@ -396,11 +396,11 @@
           "lib/netcoreapp2.2/Programatica.Framework.Core.dll": {}
         }
       },
-      "Programatica.Framework.Data/1.0.2": {
+      "Programatica.Framework.Data/1.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.6",
-          "Programatica.Framework.Core": "1.0.1"
+          "Programatica.Framework.Core": "1.0.2"
         },
         "compile": {
           "lib/netcoreapp2.2/Programatica.Framework.Data.dll": {}
@@ -1444,25 +1444,25 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "Programatica.Framework.Core/1.0.1": {
-      "sha512": "Y5WDVP/Wf4Wtre3bIshidtIION+DHqbdEA6VgSzXRTFrxoLNJyvsBcnBLb/oDyRNp5XAfY/YXRWctVP+kMcCWw==",
+    "Programatica.Framework.Core/1.0.2": {
+      "sha512": "Uh/8ae8964cXkA9FfsUG827IUWW9zybtYrKtvK3EP3J+qKGOol4WYO5wLcu+8QfZY7obs2mawFZzZMnh4FxKJg==",
       "type": "package",
-      "path": "programatica.framework.core/1.0.1",
+      "path": "programatica.framework.core/1.0.2",
       "files": [
         ".signature.p7s",
         "lib/netcoreapp2.2/Programatica.Framework.Core.dll",
-        "programatica.framework.core.1.0.1.nupkg.sha512",
+        "programatica.framework.core.1.0.2.nupkg.sha512",
         "programatica.framework.core.nuspec"
       ]
     },
-    "Programatica.Framework.Data/1.0.2": {
-      "sha512": "yw2N9Xeynxq3YaXaInntIc4l1UeDjXkrA/5qmXHGnHj4S3SuRkDA50aXX6KEdyIW2tPXFP4TFTtHGKjJCKKRlA==",
+    "Programatica.Framework.Data/1.0.3": {
+      "sha512": "KSi/zNy8jMCWTZKlW2ijytzfgWGruplj8+kqfiy8QVax2W/jovs9EagjBu57jX+psU9njB15qHJ6urLlsChJSw==",
       "type": "package",
-      "path": "programatica.framework.data/1.0.2",
+      "path": "programatica.framework.data/1.0.3",
       "files": [
         ".signature.p7s",
         "lib/netcoreapp2.2/Programatica.Framework.Data.dll",
-        "programatica.framework.data.1.0.2.nupkg.sha512",
+        "programatica.framework.data.1.0.3.nupkg.sha512",
         "programatica.framework.data.nuspec"
       ]
     },
@@ -3026,8 +3026,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
-      "Programatica.Framework.Core >= 1.0.1",
-      "Programatica.Framework.Data >= 1.0.2"
+      "Programatica.Framework.Core >= 1.0.2",
+      "Programatica.Framework.Data >= 1.0.3"
     ]
   },
   "packageFolders": {
@@ -3035,7 +3035,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",
@@ -3080,11 +3080,11 @@
           },
           "Programatica.Framework.Core": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.0.2, )"
           },
           "Programatica.Framework.Data": {
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.3, )"
           }
         },
         "imports": [
