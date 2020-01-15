@@ -34,6 +34,8 @@ namespace Programatica.Framework.Tests
             auditRepositoryMock.Verify();
             Assert.IsNotNull(actual);
             Assert.AreEqual(expected, actual.GetType());
+
+
         }
     }
 }
