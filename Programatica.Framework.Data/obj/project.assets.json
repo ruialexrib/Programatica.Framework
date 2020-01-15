@@ -384,6 +384,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Programatica.Framework.Core/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp2.2/Programatica.Framework.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/Programatica.Framework.Core.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -746,19 +758,6 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
-        }
-      },
-      "Programatica.Framework.Core/1.0.1": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "bin/placeholder/Programatica.Framework.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Programatica.Framework.Core.dll": {}
         }
       }
     }
@@ -1430,6 +1429,17 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "Programatica.Framework.Core/1.0.1": {
+      "sha512": "Y5WDVP/Wf4Wtre3bIshidtIION+DHqbdEA6VgSzXRTFrxoLNJyvsBcnBLb/oDyRNp5XAfY/YXRWctVP+kMcCWw==",
+      "type": "package",
+      "path": "programatica.framework.core/1.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netcoreapp2.2/Programatica.Framework.Core.dll",
+        "programatica.framework.core.1.0.1.nupkg.sha512",
+        "programatica.framework.core.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -2987,11 +2997,6 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
-    },
-    "Programatica.Framework.Core/1.0.1": {
-      "type": "project",
-      "path": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj",
-      "msbuildProject": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3006,7 +3011,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
       "projectName": "Programatica.Framework.Data",
@@ -3031,11 +3036,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -3056,6 +3057,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Programatica.Framework.Core": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [

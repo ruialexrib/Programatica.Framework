@@ -9,14 +9,14 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>ruialexrib</Authors>
     <Company>Programatica</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Programatica.Framework.Core\Programatica.Framework.Core.csproj" />
-    <ProjectReference Include="..\Programatica.Framework.Data\Programatica.Framework.Data.csproj" />
+    <PackageReference Include="Programatica.Framework.Core" Version="1.0.1" />
+    <PackageReference Include="Programatica.Framework.Data" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>

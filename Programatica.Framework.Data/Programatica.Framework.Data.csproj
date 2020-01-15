@@ -9,17 +9,14 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>ruialexrib</Authors>
     <Company>Programatica</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Programatica.Framework.Core\Programatica.Framework.Core.csproj" />
+    <PackageReference Include="Programatica.Framework.Core" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
