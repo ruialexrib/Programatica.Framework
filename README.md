@@ -25,3 +25,7 @@ This is a base lib framework that helps any .netcore developer to start programm
 - and much more
 
 With this framework you focus on developing your business entites and what really matters intead of wasting precious time setting and configuring the startup environmnet.
+
+### Sample Usage
+
+[Programatica.DummyApp.Mvc](https://github.com/ruialexrib/Programatica.DummyApp.Mvc)
