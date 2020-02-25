@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>Dotnetcore development framework accelarator</Description>
+    <Description>Development framework accelarator</Description>
     <Copyright>Copyright ©  Programatica Software 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Authors>ruialexrib</Authors>
     <Company>Programatica Software</Company>
   </PropertyGroup>
