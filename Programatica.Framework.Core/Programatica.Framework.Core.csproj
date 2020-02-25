@@ -1,23 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>Dotnetcore development framework accelarator</Description>
+    <Description>Development framework accelarator</Description>
     <Copyright>Copyright ©  Programatica Software 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
     <Authors>ruialexrib</Authors>
     <Company>Programatica Software</Company>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
 </Project>

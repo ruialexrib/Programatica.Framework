@@ -48,7 +48,6 @@ C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framewo
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\bin\Debug\netcoreapp2.2\Programatica.Framework.Data.dll
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\bin\Debug\netcoreapp2.2\Programatica.Framework.Data.pdb
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\obj\Debug\netcoreapp2.2\Programatica.Framework.Data.csprojAssemblyReference.cache
-C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\obj\Debug\netcoreapp2.2\Programatica.Framework.Data.csproj.CoreCompileInputs.cache
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\obj\Debug\netcoreapp2.2\Programatica.Framework.Data.AssemblyInfoInputs.cache
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\obj\Debug\netcoreapp2.2\Programatica.Framework.Data.AssemblyInfo.cs
 C:\Users\ruiribeiro\Documents\GitHub\Programatica.Framework\Programatica.Framework.Data\obj\Debug\netcoreapp2.2\Programatica.Framework.Data.dll
