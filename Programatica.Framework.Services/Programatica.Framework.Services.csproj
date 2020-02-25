@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>Dotnetcore development framework accelarator</Description>
@@ -15,23 +15,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Programatica.Framework.Core" Version="1.0.2" />
-    <PackageReference Include="Programatica.Framework.Data" Version="1.0.3" />
+    <ProjectReference Include="..\Programatica.Framework.Core\Programatica.Framework.Core.csproj" />
+    <ProjectReference Include="..\Programatica.Framework.Data\Programatica.Framework.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>System</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>System.Data</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <HintPath>System.Drawing</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>System.Xml</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
