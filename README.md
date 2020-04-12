@@ -3,7 +3,7 @@
 # Programatica Framework
 Development starter kit
 
-This is a base lib framework that helps any dotnet developer to start programming an application with a lot of features out of the box. 
+This is a base lib framework starter kit that helps starting application development with a lot of features out of the box. 
 
 ## Main Components
 
