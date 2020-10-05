@@ -19,6 +19,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="key_file.pfx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Programatica.Framework.Core\Programatica.Framework.Core.csproj" />
     <ProjectReference Include="..\Programatica.Framework.Data\Programatica.Framework.Data.csproj" />
   </ItemGroup>
