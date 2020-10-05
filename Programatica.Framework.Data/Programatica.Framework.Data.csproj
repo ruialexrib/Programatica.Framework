@@ -12,7 +12,7 @@
     <Version>1.0.5</Version>
     <Authors>ruialexrib</Authors>
     <Company>Programatica Software</Company>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>key_file.pfx</AssemblyOriginatorKeyFile>
     <AssemblyVersion>1.0.5.0</AssemblyVersion>
     <FileVersion>1.0.5.0</FileVersion>
