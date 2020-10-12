@@ -5,6 +5,8 @@ Development starter kit
 
 This is a base lib framework starter kit that helps starting application development with a lot of features out of the box. 
 
+<img src="https://github.com/ruialexrib/Programatica.Framework/blob/master/logo.png?raw=true" width="500">
+
 ## Main Components
 
 | Assembly Name  | Nuget Version |
