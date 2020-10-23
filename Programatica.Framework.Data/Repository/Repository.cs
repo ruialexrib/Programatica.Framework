@@ -45,8 +45,8 @@ namespace Programatica.Framework.Data.Repository
         {
             try
             {
-                var entity = DbSet.FirstOrDefault(p => p.Id == id);
-                _context.Entry(entity).Reload();
+                var entity = DbSet.Find(id);
+                _context.Entry(entity).State = EntityState.Detached;
                 return entity;
             }
             catch (Exception)

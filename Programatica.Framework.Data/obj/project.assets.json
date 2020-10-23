@@ -607,7 +607,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Programatica.Framework.Core/1.0.4": {
+      "Programatica.Framework.Core/1.0.5": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -2693,7 +2693,7 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Programatica.Framework.Core/1.0.4": {
+    "Programatica.Framework.Core/1.0.5": {
       "type": "project",
       "path": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj",
       "msbuildProject": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj"
@@ -2703,7 +2703,7 @@
     ".NETStandard,Version=v2.0": [
       "Microsoft.EntityFrameworkCore >= 2.2.6",
       "NETStandard.Library >= 2.0.3",
-      "Programatica.Framework.Core >= 1.0.4"
+      "Programatica.Framework.Core >= 1.0.5"
     ]
   },
   "packageFolders": {
@@ -2711,7 +2711,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.5",
+    "version": "1.0.6",
     "restore": {
       "projectUniqueName": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj",
       "projectName": "Programatica.Framework.Data",
