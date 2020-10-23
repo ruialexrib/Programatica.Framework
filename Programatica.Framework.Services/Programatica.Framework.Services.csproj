@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Programatica.Framework.Data\Programatica.Framework.Data.csproj" />
   </ItemGroup>
 
 </Project>
