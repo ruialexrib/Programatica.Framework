@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Programatica.Framework.Mvc.Controllers
 {
-    public class EJ2DataGridBaseController<T> : Controller
+    public class EJ2DataGridBaseController<T> : BaseController
         where T:IModel
     {
         protected readonly IService<T> _modelService;
