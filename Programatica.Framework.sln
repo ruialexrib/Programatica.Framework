@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Core", "Programatica.Framework.Core\Programatica.Framework.Core.csproj", "{9EE81EAD-2874-4AE7-AAAC-AC62F32ABC2A}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programatica.Framework.Tests", "Programatica.Framework.Tests\Programatica.Framework.Tests.csproj", "{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{33C12C79-063F-4084-A2A7-9B0FC9AD2691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programatica.Framework.Mvc", "Programatica.Framework.Mvc\Programatica.Framework.Mvc.csproj", "{981A3B74-8E5E-45EE-9346-4E7A12E4AA4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAE6D8C0-7D27-44BE-9E80-73CBC748D331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981A3B74-8E5E-45EE-9346-4E7A12E4AA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981A3B74-8E5E-45EE-9346-4E7A12E4AA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981A3B74-8E5E-45EE-9346-4E7A12E4AA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981A3B74-8E5E-45EE-9346-4E7A12E4AA4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

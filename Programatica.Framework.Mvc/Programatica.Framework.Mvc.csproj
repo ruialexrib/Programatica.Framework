@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>ruialexrib</Authors>
+    <Company>Programatica Software</Company>
+    <Description>Development framework accelarator</Description>
+    <Copyright>Copyright ©  Programatica Software 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="18.3.0.42" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Programatica.Framework.Data\Programatica.Framework.Data.csproj" />
+    <ProjectReference Include="..\Programatica.Framework.Services\Programatica.Framework.Services.csproj" />
+  </ItemGroup>
+
+</Project>
