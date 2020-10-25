@@ -14,6 +14,7 @@ This is a base lib framework starter kit that helps starting application develop
 | Programatica.Framework.Core | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Core) |
 | Programatica.Framework.Data | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Data) |
 | Programatica.Framework.Services | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Services) |
+| Programatica.Framework.Mvc | ![Nuget](https://img.shields.io/nuget/v/Programatica.Framework.Mvc) |
 
 ### Available Features
 - Base Object
