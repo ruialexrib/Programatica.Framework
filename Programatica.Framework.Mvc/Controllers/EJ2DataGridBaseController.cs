@@ -49,7 +49,9 @@ namespace Programatica.Framework.Mvc.Controllers
                 DataSource = operation.PerformTake(DataSource, dm.Take);
             }
 
-            return dm.RequiresCounts ? Json(new { result = DataSource, count }) : Json(DataSource);
+            return dm.RequiresCounts 
+                    ? Json(new { result = DataSource, count }) 
+                    : Json(DataSource);
         }
     }
 }

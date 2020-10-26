@@ -1,5 +1,4 @@
-﻿using Programatica.Framework.Core;
-using Programatica.Framework.Data.Models;
+﻿using Programatica.Framework.Data.Models;
 using Programatica.Framework.Services.Handlers;
 using Programatica.Framework.Services.Injector;
 using System;
@@ -42,9 +41,9 @@ namespace Programatica.Framework.Services
 
                 return model;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
 
         }
@@ -72,9 +71,9 @@ namespace Programatica.Framework.Services
 
                 return model;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
 
         }
@@ -99,9 +98,9 @@ namespace Programatica.Framework.Services
                     handler.OnAfterDeleted(record);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -129,9 +128,9 @@ namespace Programatica.Framework.Services
                     handler.OnAfterDestroyed(record);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -142,9 +141,9 @@ namespace Programatica.Framework.Services
                 var result = _injector.TRepository.GetData(id);
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -154,9 +153,9 @@ namespace Programatica.Framework.Services
             {
                 return _injector.TRepository.GetData();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -174,9 +173,9 @@ namespace Programatica.Framework.Services
 
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
             }
         }
 

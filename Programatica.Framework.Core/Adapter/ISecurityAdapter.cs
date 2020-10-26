@@ -3,6 +3,15 @@
     public interface ISecurityAdapter 
     {
         PasswordStrength GetPasswordStrength(string password);
+        bool IsStrongPassword(string password);
+        bool IsValidPassword(
+            string password,
+            int requiredLength,
+            int requiredUniqueChars,
+            bool requireNonAlphanumeric,
+            bool requireLowercase,
+            bool requireUppercase,
+            bool requireDigit);
     }
 
     public enum PasswordStrength

@@ -16,39 +16,48 @@ namespace Programatica.Framework.Mvc.Adapters
         {
             get
             {
-                return _httpContextAccessor.HttpContext.User
-                                .Claims
-                                .FirstOrDefault(x => x.Type.Equals(_options.UserNameFieldName))
-                                .Value;
+                return _httpContextAccessor
+                        .HttpContext
+                        .User
+                        .Claims
+                        .FirstOrDefault(x => x.Type.Equals(_options.UserNameFieldName))
+                        .Value;
             }
         }
         public string Password
         {
             get
             {
-                return _httpContextAccessor.HttpContext.User
-                                .Claims
-                                .FirstOrDefault(x => x.Type.Equals(_options.PasswordFieldName))
-                                .Value;
+                return _httpContextAccessor
+                        .HttpContext.User
+                        .Claims
+                        .FirstOrDefault(x => x.Type.Equals(_options.PasswordFieldName))
+                        .Value;
             }
         }
         public string AuthenticationType
         {
             get
             {
-                return _httpContextAccessor.HttpContext.User.Identity.AuthenticationType;
+                return _httpContextAccessor
+                        .HttpContext
+                        .User
+                        .Identity
+                        .AuthenticationType;
             }
         }
         public DateTime LastLoginDateTime
         {
             get
             {
-                return DateTime.Parse(
-                    _httpContextAccessor.HttpContext.User
-                                            .Claims
-                                            .FirstOrDefault(x => x.Type.Equals(_options.LastLoginDateTimeFieldName))
-                                            .Value
-                    );
+                return DateTime.Parse(  
+                                _httpContextAccessor
+                                .HttpContext
+                                .User
+                                .Claims
+                                .FirstOrDefault(x => x.Type.Equals(_options.LastLoginDateTimeFieldName))
+                                .Value
+                                );
             }
         }
 

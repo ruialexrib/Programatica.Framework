@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Programatica.Framework.Core;
 using Programatica.Framework.Data.Context;
 using Programatica.Framework.Data.Models;
 using System;
