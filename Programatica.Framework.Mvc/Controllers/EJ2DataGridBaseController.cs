@@ -18,9 +18,9 @@ namespace Programatica.Framework.Mvc.Controllers
             _modelService = modelService;
         }
 
-        public virtual async Task<ActionResult> UrlDatasource([FromBody] DataManagerRequest dm)
+        public virtual ActionResult UrlDatasource([FromBody] DataManagerRequest dm)
         {
-            IEnumerable DataSource = await _modelService.GetAsync();
+            IEnumerable DataSource = _modelService.Get();
 
             DataOperations operation = new DataOperations();
 

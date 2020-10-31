@@ -1,7 +1,6 @@
 ﻿using Programatica.Framework.Data.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Data.Repository
@@ -10,7 +9,7 @@ namespace Programatica.Framework.Data.Repository
         where T : IModel
     {
         Task<T> GetDataAsync(int id);
-        Task<IReadOnlyList<T>> GetDataAsync();
+        IQueryable<T> GetData();
         Task<T> InsertAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);

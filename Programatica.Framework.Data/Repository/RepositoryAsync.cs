@@ -2,7 +2,7 @@
 using Programatica.Framework.Data.Context;
 using Programatica.Framework.Data.Models;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Data.Repository
@@ -23,10 +23,12 @@ namespace Programatica.Framework.Data.Repository
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> GetDataAsync()
+
+        public IQueryable<T> GetData()
         {
-            return await _context.Set<T>().ToListAsync();
+                return _context.Set<T>().AsQueryable();
         }
+
 
         public async Task<T> InsertAsync(T entity)
         {

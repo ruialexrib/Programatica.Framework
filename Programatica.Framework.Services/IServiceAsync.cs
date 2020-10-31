@@ -1,6 +1,6 @@
 ﻿using Programatica.Framework.Data.Models;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Services
@@ -13,7 +13,7 @@ namespace Programatica.Framework.Services
         Task DestroyAsync(int id);
         Task DeleteAsync(int id);
         Task<T> GetAsync(int id);
-        Task<IReadOnlyList<T>> GetAsync();
+        IQueryable<T> Get();
         Task<T> InspectAsync(int id);
     }
 }

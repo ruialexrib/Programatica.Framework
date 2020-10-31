@@ -2,8 +2,7 @@
 using Programatica.Framework.Services.Handlers;
 using Programatica.Framework.Services.Injector;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Services
@@ -118,11 +117,11 @@ namespace Programatica.Framework.Services
             }
         }
 
-        public async Task<IReadOnlyList<T>> GetAsync()
+        public IQueryable<T> Get()
         {
             try
             {
-                return await _injector.TRepository.GetDataAsync();
+                return _injector.TRepository.GetData();
             }
             catch (Exception)
             {
