@@ -4,22 +4,23 @@ using Programatica.Framework.Services;
 using Syncfusion.EJ2.Base;
 using System.Collections;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Programatica.Framework.Mvc.Controllers
 {
     public class EJ2DataGridBaseController<T> : BaseController
-        where T:IModel
+        where T : IModel
     {
-        protected readonly IService<T> _modelService;
+        protected readonly IServiceAsync<T> _modelService;
 
-        public EJ2DataGridBaseController(IService<T> modelService)
+        public EJ2DataGridBaseController(IServiceAsync<T> modelService)
         {
             _modelService = modelService;
         }
 
-        public virtual ActionResult UrlDatasource([FromBody] DataManagerRequest dm)
+        public virtual async Task<ActionResult> UrlDatasource([FromBody] DataManagerRequest dm)
         {
-            IEnumerable DataSource = _modelService.Get();
+            IEnumerable DataSource = await _modelService.GetAsync();
 
             DataOperations operation = new DataOperations();
 
@@ -49,8 +50,8 @@ namespace Programatica.Framework.Mvc.Controllers
                 DataSource = operation.PerformTake(DataSource, dm.Take);
             }
 
-            return dm.RequiresCounts 
-                    ? Json(new { result = DataSource, count }) 
+            return dm.RequiresCounts
+                    ? Json(new { result = DataSource, count })
                     : Json(DataSource);
         }
     }
