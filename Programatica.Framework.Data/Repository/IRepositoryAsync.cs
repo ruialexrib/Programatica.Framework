@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programatica.Framework.Data.Repository
 {
-    interface IRepositoryAsync<T> : IDisposable
+    public interface IRepositoryAsync<T> : IDisposable
         where T : IModel
     {
         Task<T> GetDataAsync(int id);
