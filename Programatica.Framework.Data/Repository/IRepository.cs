@@ -1,5 +1,4 @@
-﻿using Programatica.Framework.Core;
-using Programatica.Framework.Data.Models;
+﻿using Programatica.Framework.Data.Models;
 using System;
 using System.Linq;
 using System.Linq.Expressions;

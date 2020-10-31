@@ -1,5 +1,4 @@
-﻿using Programatica.Framework.Core;
-using Programatica.Framework.Core.Adapter;
+﻿using Programatica.Framework.Core.Adapter;
 using Programatica.Framework.Data.Models;
 using Programatica.Framework.Data.Repository;
 using Programatica.Framework.Services.Handlers;
@@ -25,6 +24,7 @@ namespace Programatica.Framework.Services.Injector
             TRepository = tRepository;
             DateTimeAdapter = dateTimeAdapter;
             AuthUserAdapter = authUserAdapter;
+            JsonSerializerAdapter = jsonSerializerAdapter;
             EventHandlers = eventHandlers;
         }
     }

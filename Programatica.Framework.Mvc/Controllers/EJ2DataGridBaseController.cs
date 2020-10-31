@@ -4,16 +4,15 @@ using Programatica.Framework.Services;
 using Syncfusion.EJ2.Base;
 using System.Collections;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Programatica.Framework.Mvc.Controllers
 {
     public class EJ2DataGridBaseController<T> : BaseController
         where T : IModel
     {
-        protected readonly IServiceAsync<T> _modelService;
+        protected readonly IService<T> _modelService;
 
-        public EJ2DataGridBaseController(IServiceAsync<T> modelService)
+        public EJ2DataGridBaseController(IService<T> modelService)
         {
             _modelService = modelService;
         }

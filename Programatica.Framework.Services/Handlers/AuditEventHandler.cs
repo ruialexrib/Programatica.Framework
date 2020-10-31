@@ -1,5 +1,4 @@
-﻿using Programatica.Framework.Core;
-using Programatica.Framework.Core.Adapter;
+﻿using Programatica.Framework.Core.Adapter;
 using Programatica.Framework.Data.Extensions;
 using Programatica.Framework.Data.Models;
 using Programatica.Framework.Data.Repository;
@@ -39,7 +38,7 @@ namespace Programatica.Framework.Services.Handlers
 
         public void OnAfterDeleted(T model)
         {
-            CreateAudit(model, "Deleted");
+            _ = CreateAudit(model, "Deleted");
         }
 
         public void OnAfterDestroyed(T model)
@@ -47,7 +46,7 @@ namespace Programatica.Framework.Services.Handlers
 
         public void OnBeforeInspecting(T model)
         {
-            CreateAudit(model, "Inspect");
+            _ =  CreateAudit(model, "Inspect");
         }
 
         public void OnAfterModified(T model)
