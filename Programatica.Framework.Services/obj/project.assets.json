@@ -621,7 +621,7 @@
           "bin/placeholder/Programatica.Framework.Core.dll": {}
         }
       },
-      "Programatica.Framework.Data/1.0.21": {
+      "Programatica.Framework.Data/1.0.22": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -2715,7 +2715,7 @@
       "path": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj",
       "msbuildProject": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj"
     },
-    "Programatica.Framework.Data/1.0.21": {
+    "Programatica.Framework.Data/1.0.22": {
       "type": "project",
       "path": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj",
       "msbuildProject": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj"
@@ -2725,7 +2725,7 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Programatica.Framework.Core >= 1.0.5",
-      "Programatica.Framework.Data >= 1.0.21"
+      "Programatica.Framework.Data >= 1.0.22"
     ]
   },
   "packageFolders": {

@@ -49,6 +49,23 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
+        public async Task<T> GetDataAsync(int id)
+        {
+            try
+            {
+                var entity = await DbSet.Where(x => x.Id == id)
+                                        .AsNoTracking()
+                                        .FirstOrDefaultAsync();
+
+                _context.Entry(entity).State = EntityState.Detached;
+                return entity;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public T GetData(int id)
         {
             try
@@ -63,12 +80,48 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
+        public async Task<int> InsertAsync(T entity)
+        {
+            try
+            {
+                DbSet.Add(entity);
+                return await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int Insert(T entity)
         {
             try
             {
                 DbSet.Add(entity);
                 return _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<int> InsertIfNewAsync(T entity, Expression<Func<T, bool>> predicate)
+        {
+            try
+            {
+                var record = await DbSet.AsQueryable()
+                                  .Where(predicate)
+                                  .SingleOrDefaultAsync();
+
+                if (record == null)
+                {
+                    return await InsertAsync(entity);
+                }
+                else
+                {
+                    return 0;
+                }
             }
             catch (Exception)
             {
@@ -99,6 +152,20 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
+        public async Task<int> UpdateAsync(T entity)
+        {
+            try
+            {
+                DbSet.Attach(entity);
+                _context.Entry(entity).State = EntityState.Modified;
+                return await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int Update(T entity)
         {
             try
@@ -106,6 +173,20 @@ namespace Programatica.Framework.Data.Repository
                 DbSet.Attach(entity);
                 _context.Entry(entity).State = EntityState.Modified;
                 return _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<int> DeleteAsync(T entity)
+        {
+            try
+            {
+                DbSet.Attach(entity);
+                DbSet.Remove(entity);
+                return await _context.SaveChangesAsync();
             }
             catch (Exception)
             {
