@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.0.21</Version>
-    <AssemblyVersion>1.0.21.0</AssemblyVersion>
+    <Version>1.0.22</Version>
+    <AssemblyVersion>1.0.22.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

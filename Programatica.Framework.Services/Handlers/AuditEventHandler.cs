@@ -4,6 +4,7 @@ using Programatica.Framework.Data.Models;
 using Programatica.Framework.Data.Repository;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Programatica.Framework.Services.Handlers
 {
@@ -30,10 +31,10 @@ namespace Programatica.Framework.Services.Handlers
             _trackChangesService = trackChangesService;
         }
 
-        public void OnAfterCreated(T model)
+        public async void OnAfterCreated(T model)
         {
-            var audit = CreateAudit(model, "Create");
-            var changes = CreateTrackChanges(false, model, audit.Id);
+            var audit = await CreateAudit(model, "Create");
+            var changes = await CreateTrackChanges(false, model, audit.Id);
         }
 
         public void OnAfterDeleted(T model)
@@ -46,7 +47,7 @@ namespace Programatica.Framework.Services.Handlers
 
         public void OnBeforeInspecting(T model)
         {
-            _ =  CreateAudit(model, "Inspect");
+            _ = CreateAudit(model, "Inspect");
         }
 
         public void OnAfterModified(T model)
@@ -70,7 +71,7 @@ namespace Programatica.Framework.Services.Handlers
             var changes = CreateTrackChanges(true, model, audit.Id);
         }
 
-        private Audit CreateAudit(T model, string functionTypeDefinitionProvider)
+        private async Task<Audit> CreateAudit(T model, string functionTypeDefinitionProvider)
         {
             var audit = new Audit
             {
@@ -84,24 +85,24 @@ namespace Programatica.Framework.Services.Handlers
 
                 IsSystem = true
             };
-            _auditRepository.Insert(audit);
+            await _auditRepository.InsertAsync(audit);
             return audit;
         }
 
-        private List<Variance> CreateTrackChanges(bool isModify, IModel model, int auditId)
+        private async Task<List<Variance>> CreateTrackChanges(bool isModify, IModel model, int auditId)
         {
             var old = Activator.CreateInstance<T>();
             old.SystemId = Guid.Empty;
 
             if (isModify)
             {
-                old = _modelRepository.GetData(model.Id);
+                old = await _modelRepository.GetDataAsync(model.Id);
             }
             var changes = model.TrackChanges(old);
 
             foreach (var change in changes)
             {
-                _trackChangesService.Create(new TrackChange
+                await _trackChangesService.CreateAsync(new TrackChange
                 {
                     AuditId = auditId,
                     FieldName = change.Prop,
