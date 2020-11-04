@@ -2,8 +2,10 @@
 using Programatica.Framework.Data.Context;
 using Programatica.Framework.Data.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Programatica.Framework.Data.Repository
 {
@@ -27,12 +29,19 @@ namespace Programatica.Framework.Data.Repository
         }
 
         #region IRepository<T>
+
+        public async Task<IEnumerable<T>> GetDataAsync()
+        {
+            return await DbSet.AsNoTracking()
+                              .ToListAsync();
+        }
+
         public IQueryable<T> GetData()
         {
             try
             {
-                return DbSet
-                    .AsQueryable();
+                return DbSet.AsNoTracking()
+                            .AsQueryable();
             }
             catch (Exception)
             {
@@ -71,7 +80,10 @@ namespace Programatica.Framework.Data.Repository
         {
             try
             {
-                var record = DbSet.AsQueryable().Where(predicate).SingleOrDefault();
+                var record = DbSet.AsQueryable()
+                                  .Where(predicate)
+                                  .SingleOrDefault();
+
                 if (record == null)
                 {
                     return Insert(entity);
