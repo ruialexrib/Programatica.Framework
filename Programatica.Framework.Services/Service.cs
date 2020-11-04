@@ -31,7 +31,7 @@ namespace Programatica.Framework.Services
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnBeforeCreating(model);
+                    await handler.OnBeforeCreatingAsync(model);
                 }
 
                 await _injector.TRepository.InsertAsync(model);
@@ -39,7 +39,7 @@ namespace Programatica.Framework.Services
                 // handle after events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnAfterCreated(model);
+                    await handler.OnAfterCreatedAsync(model);
                 }
 
                 return model;
@@ -91,7 +91,7 @@ namespace Programatica.Framework.Services
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnBeforeModifying(model);
+                    await handler.OnBeforeModifyingAsync(model);
                 }
 
                 await _injector.TRepository.UpdateAsync(model);
@@ -99,7 +99,7 @@ namespace Programatica.Framework.Services
                 // handle after events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnAfterModified(model);
+                    await handler.OnAfterModifiedAsync(model);
                 }
 
                 return model;
@@ -149,7 +149,7 @@ namespace Programatica.Framework.Services
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnBeforeDeleting(record);
+                    await handler.OnBeforeDeletingAsync(record);
                 }
 
                 await _injector.TRepository.DeleteAsync(record);
@@ -157,7 +157,7 @@ namespace Programatica.Framework.Services
                 // handle after events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnAfterDeleted(record);
+                    await handler.OnAfterDeletedAsync(record);
                 }
             }
             catch (Exception)
@@ -205,7 +205,7 @@ namespace Programatica.Framework.Services
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnBeforeDestroying(record);
+                    await handler.OnBeforeDestroyingAsync(record);
                 }
 
                 await _injector.TRepository.UpdateAsync(record);
@@ -213,7 +213,7 @@ namespace Programatica.Framework.Services
                 // handle after events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnAfterDestroyed(record);
+                    await handler.OnAfterDestroyedAsync(record);
                 }
             }
             catch (Exception)
@@ -312,7 +312,7 @@ namespace Programatica.Framework.Services
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)
                 {
-                    handler.OnBeforeInspecting(result);
+                    await handler.OnBeforeInspectingAsync(result);
                 }
 
                 return result;

@@ -9,13 +9,13 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ruialexrib/Programatica.Framework</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ruialexrib/Programatica.Framework</RepositoryUrl>
-    <Version>1.0.22</Version>
+    <Version>1.0.25</Version>
     <Authors>ruialexrib</Authors>
     <Company>Programatica Software</Company>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>key_file.pfx</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>1.0.22.0</AssemblyVersion>
-    <FileVersion>1.0.22.0</FileVersion>
+    <AssemblyVersion>1.0.25.0</AssemblyVersion>
+    <FileVersion>1.0.25.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

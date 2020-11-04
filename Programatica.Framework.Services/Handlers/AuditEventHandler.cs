@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Programatica.Framework.Services.Handlers
 {
     public class AuditEventHandler<T> : IEventHandler<T>
-                    where T : IModel
+        where T : IModel
     {
         private readonly IRepository<Audit> _auditRepository;
         private readonly IDateTimeAdapter _dateTimeAdapter;
@@ -31,24 +31,19 @@ namespace Programatica.Framework.Services.Handlers
             _trackChangesService = trackChangesService;
         }
 
-        public async void OnAfterCreated(T model)
-        {
-            var audit = await CreateAudit(model, "Create");
-            var changes = await CreateTrackChanges(false, model, audit.Id);
-        }
+        #region unused events
+
+        public void OnAfterCreated(T model)
+        { }
 
         public void OnAfterDeleted(T model)
-        {
-            _ = CreateAudit(model, "Deleted");
-        }
+        { }
 
         public void OnAfterDestroyed(T model)
         { }
 
         public void OnBeforeInspecting(T model)
-        {
-            _ = CreateAudit(model, "Inspect");
-        }
+        { }
 
         public void OnAfterModified(T model)
         { }
@@ -60,15 +55,60 @@ namespace Programatica.Framework.Services.Handlers
         { }
 
         public void OnBeforeDestroying(T model)
-        {
-            var audit = CreateAudit(model, "Destroy");
-            var changes = CreateTrackChanges(true, model, audit.Id);
-        }
+        { }
 
         public void OnBeforeModifying(T model)
+        { }
+
+        public Task OnBeforeCreatingAsync(T model)
         {
-            var audit = CreateAudit(model, "Modify");
-            var changes = CreateTrackChanges(true, model, audit.Id);
+            return Task.CompletedTask;
+        }
+
+        public Task OnAfterModifiedAsync(T model)
+        {
+            return Task.CompletedTask;
+        }
+
+        public Task OnAfterDestroyedAsync(T model)
+        {
+            return Task.CompletedTask;
+        }
+
+        public Task OnBeforeDeletingAsync(T model)
+        {
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        public async Task OnAfterCreatedAsync(T model)
+        {
+            await Task.Delay(5);
+            var audit = await CreateAudit(model, "Create");
+            await CreateTrackChanges(false, model, audit.Id);
+        }
+
+        public async Task OnBeforeModifyingAsync(T model)
+        {
+            var audit = await CreateAudit(model, "Modify");
+            await CreateTrackChanges(true, model, audit.Id);
+        }
+
+        public async Task OnBeforeDestroyingAsync(T model)
+        {
+            var audit = await CreateAudit(model, "Destroy");
+            await CreateTrackChanges(true, model, audit.Id);
+        }
+
+        public async Task OnAfterDeletedAsync(T model)
+        {
+            await CreateAudit(model, "Deleted");
+        }
+
+        public async Task OnBeforeInspectingAsync(T model)
+        {
+            await CreateAudit(model, "Inspect");
         }
 
         private async Task<Audit> CreateAudit(T model, string functionTypeDefinitionProvider)
