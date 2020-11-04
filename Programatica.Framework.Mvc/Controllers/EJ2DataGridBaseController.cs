@@ -4,6 +4,7 @@ using Programatica.Framework.Services;
 using Syncfusion.EJ2.Base;
 using System.Collections;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Programatica.Framework.Mvc.Controllers
 {
@@ -17,9 +18,9 @@ namespace Programatica.Framework.Mvc.Controllers
             _modelService = modelService;
         }
 
-        public virtual ActionResult UrlDatasource([FromBody] DataManagerRequest dm)
+        public virtual async Task<ActionResult> UrlDatasource([FromBody] DataManagerRequest dm)
         {
-            IEnumerable DataSource = _modelService.Get();
+            IEnumerable DataSource = await _modelService.GetAsync();
 
             DataOperations operation = new DataOperations();
 
