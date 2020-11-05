@@ -23,9 +23,9 @@ namespace Programatica.Framework.Mvc.Authentication
 
         public async Task SignIn(HttpContext httpContext, string username, string password, bool isPersistent = false)
         {
-            if (_authenticationUtility.AuthByUsernameAndPassword(username, password))
+            if (await _authenticationUtility.AuthByUsernameAndPassword(username, password))
             {
-                var claims = _authenticationUtility.GetUserPrincipalClaims(username, password);
+                var claims = await _authenticationUtility.GetUserPrincipalClaims(username, password);
                 ClaimsIdentity identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 ClaimsPrincipal principal = new ClaimsPrincipal(identity);
 
