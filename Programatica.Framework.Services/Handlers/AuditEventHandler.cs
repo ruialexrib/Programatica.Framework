@@ -33,33 +33,6 @@ namespace Programatica.Framework.Services.Handlers
 
         #region unused events
 
-        public void OnAfterCreated(T model)
-        { }
-
-        public void OnAfterDeleted(T model)
-        { }
-
-        public void OnAfterDestroyed(T model)
-        { }
-
-        public void OnBeforeInspecting(T model)
-        { }
-
-        public void OnAfterModified(T model)
-        { }
-
-        public void OnBeforeCreating(T model)
-        { }
-
-        public void OnBeforeDeleting(T model)
-        { }
-
-        public void OnBeforeDestroying(T model)
-        { }
-
-        public void OnBeforeModifying(T model)
-        { }
-
         public Task OnBeforeCreatingAsync(T model)
         {
             return Task.CompletedTask;
@@ -84,7 +57,6 @@ namespace Programatica.Framework.Services.Handlers
 
         public async Task OnAfterCreatedAsync(T model)
         {
-            await Task.Delay(5);
             var audit = await CreateAudit(model, "Create");
             await CreateTrackChanges(false, model, audit.Id);
         }

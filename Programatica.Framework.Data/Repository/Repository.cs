@@ -36,19 +36,6 @@ namespace Programatica.Framework.Data.Repository
                               .ToListAsync();
         }
 
-        public IQueryable<T> GetData()
-        {
-            try
-            {
-                return DbSet.AsNoTracking()
-                            .AsQueryable();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         public async Task<T> GetDataAsync(int id)
         {
             try
@@ -66,39 +53,12 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
-        public T GetData(int id)
-        {
-            try
-            {
-                var entity = DbSet.Find(id);
-                _context.Entry(entity).State = EntityState.Detached;
-                return entity;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         public async Task<int> InsertAsync(T entity)
         {
             try
             {
                 DbSet.Add(entity);
                 return await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public int Insert(T entity)
-        {
-            try
-            {
-                DbSet.Add(entity);
-                return _context.SaveChanges();
             }
             catch (Exception)
             {
@@ -129,29 +89,6 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
-        public int InsertIfNew(T entity, Expression<Func<T, bool>> predicate)
-        {
-            try
-            {
-                var record = DbSet.AsQueryable()
-                                  .Where(predicate)
-                                  .SingleOrDefault();
-
-                if (record == null)
-                {
-                    return Insert(entity);
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         public async Task<int> UpdateAsync(T entity)
         {
             try
@@ -166,20 +103,6 @@ namespace Programatica.Framework.Data.Repository
             }
         }
 
-        public int Update(T entity)
-        {
-            try
-            {
-                DbSet.Attach(entity);
-                _context.Entry(entity).State = EntityState.Modified;
-                return _context.SaveChanges();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
         public async Task<int> DeleteAsync(T entity)
         {
             try
@@ -187,20 +110,6 @@ namespace Programatica.Framework.Data.Repository
                 DbSet.Attach(entity);
                 DbSet.Remove(entity);
                 return await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public int Delete(T entity)
-        {
-            try
-            {
-                DbSet.Attach(entity);
-                DbSet.Remove(entity);
-                return _context.SaveChanges();
             }
             catch (Exception)
             {
