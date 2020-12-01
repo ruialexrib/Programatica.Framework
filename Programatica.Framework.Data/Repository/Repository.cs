@@ -36,6 +36,13 @@ namespace Programatica.Framework.Data.Repository
                               .ToListAsync();
         }
 
+        public async Task<IEnumerable<T>> GetDataAsync(Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            var query = DbSet as IQueryable<T>;
+            IQueryable<T> queryWithEagerLoading = func(query);
+            return await queryWithEagerLoading.AsNoTracking().ToListAsync();
+        }
+
         public async Task<T> GetDataAsync(int id)
         {
             try
@@ -51,6 +58,14 @@ namespace Programatica.Framework.Data.Repository
             {
                 throw;
             }
+        }
+
+        public async Task<T> GetDataAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
+        {
+
+            var entity = DbSet.Where(x => x.Id == id);
+            IQueryable<T> entityWithEagerLoading = func(entity);
+            return await entityWithEagerLoading.AsNoTracking().FirstOrDefaultAsync();
         }
 
         public async Task<int> InsertAsync(T entity)

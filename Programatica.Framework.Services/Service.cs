@@ -4,6 +4,7 @@ using Programatica.Framework.Services.Injector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Services
@@ -147,6 +148,19 @@ namespace Programatica.Framework.Services
             }
         }
 
+        public async Task<T> GetAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            try
+            {
+                var result = await _injector.TRepository.GetDataAsync(id, func);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<T>> GetAsync()
         {
             try
@@ -159,11 +173,43 @@ namespace Programatica.Framework.Services
             }
         }
 
+        public async Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            try
+            {
+                return await _injector.TRepository.GetDataAsync(func);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<T> InspectAsync(int id)
         {
             try
             {
                 var result = await _injector.TRepository.GetDataAsync(id);
+
+                // handle before events  
+                foreach (IEventHandler<T> handler in _injector.EventHandlers)
+                {
+                    await handler.OnBeforeInspectingAsync(result);
+                }
+
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<T> InspectAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            try
+            {
+                var result = await _injector.TRepository.GetDataAsync(id, func);
 
                 // handle before events  
                 foreach (IEventHandler<T> handler in _injector.EventHandlers)

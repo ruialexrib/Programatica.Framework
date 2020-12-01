@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Services
@@ -19,8 +20,14 @@ namespace Programatica.Framework.Services
 
         Task<T> GetAsync(int id);
 
+        Task<T> GetAsync(int id, Func<IQueryable<T>, IQueryable<T>> func);
+
         Task<IEnumerable<T>> GetAsync();
 
+        Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func);
+
         Task<T> InspectAsync(int id);
+
+        Task<T> InspectAsync(int id, Func<IQueryable<T>, IQueryable<T>> func);
     }
 }

@@ -11,7 +11,9 @@ namespace Programatica.Framework.Data.Repository
         where T : IModel
     {
         Task<IEnumerable<T>> GetDataAsync();
+        Task<IEnumerable<T>> GetDataAsync(Func<IQueryable<T>, IQueryable<T>> func);
         Task<T> GetDataAsync(int id);
+        Task<T> GetDataAsync(int id, Func<IQueryable<T>, IQueryable<T>> func);
         Task<int> InsertAsync(T entity);
         Task<int> InsertIfNewAsync(T entity, Expression<Func<T, bool>> predicate);
         Task<int> UpdateAsync(T entity);

@@ -1,26 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Programatica.Framework.Data.Models;
-using Programatica.Framework.Services;
 using Syncfusion.EJ2.Base;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Programatica.Framework.Mvc.Controllers
 {
-    public class EJ2DataGridBaseController<T> : BaseController
+    public abstract class EJ2DataGridBaseController<T> : BaseController
         where T : IModel
     {
-        protected readonly IService<T> _modelService;
+        //protected readonly IService<T> _modelService;
 
-        public EJ2DataGridBaseController(IService<T> modelService)
+        public EJ2DataGridBaseController()
         {
-            _modelService = modelService;
+            //_modelService = modelService;
         }
+
+        abstract protected Task<IEnumerable<T>> LoadDataAsync();
 
         public virtual async Task<ActionResult> UrlDatasource([FromBody] DataManagerRequest dm)
         {
-            IEnumerable DataSource = await _modelService.GetAsync();
+            IEnumerable DataSource = await LoadDataAsync();
 
             DataOperations operation = new DataOperations();
 

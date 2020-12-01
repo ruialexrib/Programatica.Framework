@@ -12,13 +12,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <OutputPath>N:\</OutputPath>
-    <Version>1.1.1</Version>
+    <Version>1.1.7</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
+    <PackageReference Include="shortid" Version="3.0.0" />
     <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="18.3.0.42" />
   </ItemGroup>
 
