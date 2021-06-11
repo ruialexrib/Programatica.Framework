@@ -2729,23 +2729,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ruiribeiro\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ruial\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.1.4",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",
-      "projectPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
-      "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
+      "projectPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "packagesPath": "C:\\Users\\ruial\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ruiribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ruial\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2753,18 +2749,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "N:\\": {},
+        "C:\\Users\\ruial\\Documents\\Nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
+            "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
             },
-            "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
+            "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
+              "projectPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
             }
           }
         }
@@ -2796,7 +2792,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

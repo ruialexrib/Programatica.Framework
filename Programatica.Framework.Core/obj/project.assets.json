@@ -299,23 +299,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ruiribeiro\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ruial\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.1.1",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
+      "projectUniqueName": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
       "projectName": "Programatica.Framework.Core",
-      "projectPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
-      "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\Github\\Programatica.Framework\\Programatica.Framework.Core\\obj\\",
+      "projectPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj",
+      "packagesPath": "C:\\Users\\ruial\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ruiribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ruial\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -323,7 +319,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "N:\\": {},
+        "C:\\Users\\ruial\\Documents\\Nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -367,7 +363,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
