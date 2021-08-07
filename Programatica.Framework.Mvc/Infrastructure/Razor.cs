@@ -14,5 +14,11 @@ namespace Programatica.Framework.Mvc.Infrastructure
                 Length = 8
             });
         }
+
+        public static string ElementRndShortId(string prefix)
+        {
+            var rnd = Rnd();
+            return $"{prefix}_{rnd}";
+        }
     }
 }
