@@ -18,7 +18,7 @@ namespace Programatica.Framework.Mvc.Infrastructure
         public static string ElementRndShortId(string prefix)
         {
             var rnd = Rnd();
-            return $"{prefix}_{rnd}";
+            return $"{prefix}_id_{rnd}";
         }
     }
 }
