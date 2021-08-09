@@ -35,26 +35,37 @@ namespace Programatica.Framework.Mvc.Filters
 
             public void OnActionExecuting(ActionExecutingContext context)
             {
-                var claims = _httpContextAccessor
+                var identity = _httpContextAccessor
                                 .HttpContext
                                 .User
-                                .Claims
-                                .Where(x => x.Type.Equals(_options.UserRoleFieldName))
-                                .ToList();
+                                .Identity;
 
-                bool valid = false;
-                foreach (var role in _roles)
+                if (identity.IsAuthenticated)
                 {
-                    foreach (var claim in claims)
+                    var claims = _httpContextAccessor
+                                    .HttpContext
+                                    .User
+                                    .Claims
+                                    .Where(x => x.Type.Equals(_options.UserRoleFieldName))
+                                    .ToList();
+
+                    bool valid = false;
+                    foreach (var role in _roles)
                     {
-                        if (claim.Value.Equals(role))
+                        foreach (var claim in claims)
                         {
-                            valid = true;
-                            break;
+                            if (claim.Value.Equals(role))
+                            {
+                                valid = true;
+                                break;
+                            }
                         }
                     }
-                }
-                if (!valid)
+                    if (!valid)
+                    {
+                        context.Result = new ForbidResult();
+                    }
+                }else
                 {
                     context.Result = new ChallengeResult(CookieAuthenticationDefaults.AuthenticationScheme);
                 }
