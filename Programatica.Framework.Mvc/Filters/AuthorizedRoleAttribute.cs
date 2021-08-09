@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Options;
@@ -55,7 +56,7 @@ namespace Programatica.Framework.Mvc.Filters
                 }
                 if (!valid)
                 {
-                    context.Result = new ForbidResult();
+                    context.Result = new ChallengeResult(CookieAuthenticationDefaults.AuthenticationScheme);
                 }
             }
         }
