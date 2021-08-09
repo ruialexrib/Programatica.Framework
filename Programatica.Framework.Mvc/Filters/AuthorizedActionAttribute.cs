@@ -38,7 +38,7 @@ namespace Programatica.Framework.Mvc.Filters
                 // check if permission is in the permissionsList of the user (if at leat one userRole has this permission) 
 
                 bool valid = true;
-                if (!valid) context.Result = new BadRequestObjectResult("Invalid!");
+                if (!valid) context.Result = new ForbidResult();
 
             }
         }
