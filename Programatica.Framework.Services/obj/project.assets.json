@@ -633,7 +633,7 @@
           "bin/placeholder/Programatica.Framework.Core.dll": {}
         }
       },
-      "Programatica.Framework.Data/1.1.6": {
+      "Programatica.Framework.Data/1.1.7": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -2741,7 +2741,7 @@
       "path": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj",
       "msbuildProject": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj"
     },
-    "Programatica.Framework.Data/1.1.6": {
+    "Programatica.Framework.Data/1.1.7": {
       "type": "project",
       "path": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj",
       "msbuildProject": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj"
@@ -2751,14 +2751,14 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Programatica.Framework.Core >= 1.1.1",
-      "Programatica.Framework.Data >= 1.1.6"
+      "Programatica.Framework.Data >= 1.1.7"
     ]
   },
   "packageFolders": {
     "C:\\Users\\ruial\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.1.6",
+    "version": "1.1.7",
     "restore": {
       "projectUniqueName": "C:\\Users\\ruial\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",

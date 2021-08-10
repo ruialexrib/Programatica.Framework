@@ -24,6 +24,8 @@ namespace Programatica.Framework.Services
 
         Task<IEnumerable<T>> GetAsync();
 
+        Task<IEnumerable<T>> GetAsync(string sql);
+
         Task<IEnumerable<T>> GetAsync(IQueryable<T> query);
 
         Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func);
@@ -31,6 +33,8 @@ namespace Programatica.Framework.Services
         Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> predicate);
 
         IQueryable<T> Get();
+
+        IQueryable<T> Get(string sql);
 
         IQueryable<T> Get(Func<IQueryable<T>, IQueryable<T>> func);
 

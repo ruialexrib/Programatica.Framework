@@ -193,6 +193,18 @@ namespace Programatica.Framework.Services
             }
         }
 
+        public async Task<IEnumerable<T>> GetAsync(string sql)
+        {
+            try
+            {
+                return await _injector.TRepository.GetDataAsync(sql);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func)
         {
             try
@@ -210,6 +222,18 @@ namespace Programatica.Framework.Services
             try
             {
                 return _injector.TRepository.GetData();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<T> Get(string sql)
+        {
+            try
+            {
+                return _injector.TRepository.GetData(sql);
             }
             catch (Exception)
             {

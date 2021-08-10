@@ -36,6 +36,11 @@ namespace Programatica.Framework.Data.Repository
             return DbSet.AsNoTracking();
         }
 
+        public IQueryable<T> GetData(string sql)
+        {
+            return DbSet.FromSql<T>(sql);
+        }
+
         public IQueryable<T> GetData(Func<IQueryable<T>, IQueryable<T>> func)
         {
             var query = DbSet as IQueryable<T>;

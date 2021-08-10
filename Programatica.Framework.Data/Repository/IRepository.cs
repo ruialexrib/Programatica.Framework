@@ -11,6 +11,7 @@ namespace Programatica.Framework.Data.Repository
         where T : IModel
     {
         IQueryable<T> GetData();
+        IQueryable<T> GetData(string sql);
         IQueryable<T> GetData(Func<IQueryable<T>, IQueryable<T>> func);
         IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate);
 
