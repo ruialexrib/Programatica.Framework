@@ -19,38 +19,38 @@ namespace Programatica.Framework.Mvc.Controllers
             //_modelService = modelService;
         }
 
-        abstract protected Task<IEnumerable<T>> LoadDataAsync();
+        abstract protected IQueryable<T> LoadData();
 
-        public virtual async Task<ActionResult> UrlDatasource([FromBody] DataManagerRequest dm)
+        public virtual ActionResult UrlDatasource([FromBody] DataManagerRequest dm)
         {
-            IEnumerable DataSource = await LoadDataAsync();
+            IQueryable DataSource = LoadData();
 
             DataOperations operation = new DataOperations();
 
             if (dm.Search != null && dm.Search.Count > 0)
             {
-                DataSource = operation.PerformSearching(DataSource, dm.Search);  //Search
+                DataSource = (IQueryable)operation.PerformSearching(DataSource, dm.Search);  //Search
             }
 
             if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
             {
-                DataSource = operation.PerformSorting(DataSource, dm.Sorted);
+                DataSource = (IQueryable)operation.PerformSorting(DataSource, dm.Sorted);
             }
 
             if (dm.Where != null && dm.Where.Count > 0) //Filtering
             {
-                DataSource = operation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                DataSource = (IQueryable)operation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
             }
 
             int count = DataSource.Cast<T>().Count();
 
             if (dm.Skip != 0)
             {
-                DataSource = operation.PerformSkip(DataSource, dm.Skip);   //Paging
+                DataSource = (IQueryable)operation.PerformSkip(DataSource, dm.Skip);   //Paging
             }
             if (dm.Take != 0)
             {
-                DataSource = operation.PerformTake(DataSource, dm.Take);
+                DataSource = (IQueryable)operation.PerformTake(DataSource, dm.Take);
             }
 
             return dm.RequiresCounts
