@@ -15,6 +15,7 @@ namespace Programatica.Framework.Data.Repository
         IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate);
 
         Task<IEnumerable<T>> GetDataAsync();
+        Task<IEnumerable<T>> GetDataAsync(string sql);
         Task<IEnumerable<T>> GetDataAsync(Func<IQueryable<T>, IQueryable<T>> func);
         Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate);
 

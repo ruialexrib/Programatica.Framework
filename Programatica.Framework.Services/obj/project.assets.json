@@ -44,6 +44,18 @@
       "Microsoft.EntityFrameworkCore.Analyzers/2.2.6": {
         "type": "package"
       },
+      "Microsoft.EntityFrameworkCore.Relational/2.2.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -621,11 +633,12 @@
           "bin/placeholder/Programatica.Framework.Core.dll": {}
         }
       },
-      "Programatica.Framework.Data/1.1.5": {
+      "Programatica.Framework.Data/1.1.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.6",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
           "Programatica.Framework.Core": "1.1.1"
         },
         "compile": {
@@ -743,6 +756,19 @@
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "microsoft.entityframeworkcore.analyzers.2.2.6.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/2.2.6": {
+      "sha512": "AlB4Gg1nplg6fwieCLixphmYkhwM1SSHecE43oDizAjFUSs7vlL5mlwf620X4SB037pVg+naxhBEtF53TGa6yQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/2.2.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
+        "microsoft.entityframeworkcore.relational.2.2.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
@@ -2715,7 +2741,7 @@
       "path": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj",
       "msbuildProject": "../Programatica.Framework.Core/Programatica.Framework.Core.csproj"
     },
-    "Programatica.Framework.Data/1.1.5": {
+    "Programatica.Framework.Data/1.1.6": {
       "type": "project",
       "path": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj",
       "msbuildProject": "../Programatica.Framework.Data/Programatica.Framework.Data.csproj"
@@ -2725,7 +2751,7 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Programatica.Framework.Core >= 1.1.1",
-      "Programatica.Framework.Data >= 1.1.5"
+      "Programatica.Framework.Data >= 1.1.6"
     ]
   },
   "packageFolders": {

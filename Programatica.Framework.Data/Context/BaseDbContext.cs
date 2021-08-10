@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Programatica.Framework.Core;
 using Programatica.Framework.Data.Models;
-using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Programatica.Framework.Data.Context
 {
@@ -38,8 +35,8 @@ namespace Programatica.Framework.Data.Context
                     }
                 }
             }
-
             return base.SaveChanges();
         }
+
     }
 }

@@ -54,6 +54,11 @@ namespace Programatica.Framework.Data.Repository
                               .ToListAsync();
         }
 
+        public async Task<IEnumerable<T>> GetDataAsync(string sql)
+        {
+            return await DbSet.FromSql<T>(sql).ToListAsync();
+        }
+
         public async Task<IEnumerable<T>> GetDataAsync(Func<IQueryable<T>, IQueryable<T>> func)
         {
             var query = DbSet as IQueryable<T>;
