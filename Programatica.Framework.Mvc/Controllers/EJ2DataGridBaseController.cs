@@ -12,11 +12,9 @@ namespace Programatica.Framework.Mvc.Controllers
     public abstract class EJ2DataGridBaseController<T> : BaseController
         where T : IModel
     {
-        //protected readonly IService<T> _modelService;
 
         public EJ2DataGridBaseController()
         {
-            //_modelService = modelService;
         }
 
         abstract protected IQueryable<T> LoadData();
