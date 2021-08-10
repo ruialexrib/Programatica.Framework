@@ -21,6 +21,8 @@ namespace Programatica.Framework.Services
 
         #region IService<T>
 
+
+
         public async Task<T> CreateAsync(T model)
         {
             try
@@ -161,6 +163,19 @@ namespace Programatica.Framework.Services
             }
         }
 
+        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> predicate)
+        {
+            try
+            {
+                var result = await _injector.TRepository.GetWhereAsync(predicate);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<T>> GetAsync()
         {
             try
@@ -178,6 +193,43 @@ namespace Programatica.Framework.Services
             try
             {
                 return await _injector.TRepository.GetDataAsync(func);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<T> Get()
+        {
+            try
+            {
+                return _injector.TRepository.GetData();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<T> Get(Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            try
+            {
+                return _injector.TRepository.GetData(func);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<T> Get(Expression<Func<T, bool>> predicate)
+        {
+            try
+            {
+                var result = _injector.TRepository.GetWhere(predicate);
+                return result;
             }
             catch (Exception)
             {

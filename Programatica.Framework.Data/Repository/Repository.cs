@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Programatica.Framework.Data.Context;
 using Programatica.Framework.Data.Models;
 using System;
@@ -30,6 +31,23 @@ namespace Programatica.Framework.Data.Repository
 
         #region IRepository<T>
 
+        public IQueryable<T> GetData()
+        {
+            return DbSet.AsNoTracking();
+        }
+
+        public IQueryable<T> GetData(Func<IQueryable<T>, IQueryable<T>> func)
+        {
+            var query = DbSet as IQueryable<T>;
+            IQueryable<T> queryWithEagerLoading = func(query);
+            return queryWithEagerLoading.AsNoTracking();
+        }
+
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate)
+        {
+            return DbSet.Where(predicate);
+        }
+
         public async Task<IEnumerable<T>> GetDataAsync()
         {
             return await DbSet.AsNoTracking()
@@ -41,6 +59,12 @@ namespace Programatica.Framework.Data.Repository
             var query = DbSet as IQueryable<T>;
             IQueryable<T> queryWithEagerLoading = func(query);
             return await queryWithEagerLoading.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await DbSet.Where(predicate)
+                              .ToListAsync();
         }
 
         public async Task<T> GetDataAsync(int id)

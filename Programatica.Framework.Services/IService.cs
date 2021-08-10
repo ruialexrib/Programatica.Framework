@@ -26,6 +26,14 @@ namespace Programatica.Framework.Services
 
         Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func);
 
+        Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> predicate);
+
+        IQueryable<T> Get();
+
+        IQueryable<T> Get(Func<IQueryable<T>, IQueryable<T>> func);
+
+        IQueryable<T> Get(Expression<Func<T, bool>> predicate);
+
         Task<T> InspectAsync(int id);
 
         Task<T> InspectAsync(int id, Func<IQueryable<T>, IQueryable<T>> func);
