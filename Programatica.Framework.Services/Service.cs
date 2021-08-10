@@ -1,4 +1,5 @@
-﻿using Programatica.Framework.Data.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Programatica.Framework.Data.Models;
 using Programatica.Framework.Services.Handlers;
 using Programatica.Framework.Services.Injector;
 using System;
@@ -135,6 +136,12 @@ namespace Programatica.Framework.Services
             {
                 throw;
             }
+        }
+
+        public async Task<IEnumerable<T>> GetAsync(IQueryable<T> query)
+        {
+            var result = await query.ToListAsync();
+            return result;
         }
 
         public async Task<T> GetAsync(int id)
