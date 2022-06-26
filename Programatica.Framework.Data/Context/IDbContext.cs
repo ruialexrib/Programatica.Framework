@@ -16,7 +16,7 @@ namespace Programatica.Framework.Data.Context
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         int SaveChanges();
-
+        void Migrate();
         void Dispose();
     }
 }

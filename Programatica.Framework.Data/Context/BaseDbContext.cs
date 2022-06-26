@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Programatica.Framework.Data.Extensions;
 using Programatica.Framework.Data.Models;
+using System;
 using System.Linq;
 
 namespace Programatica.Framework.Data.Context
@@ -38,5 +40,25 @@ namespace Programatica.Framework.Data.Context
             return base.SaveChanges();
         }
 
+        public void Migrate()
+        {
+            var db = base.Database;
+            try
+            {
+                if (!db.Exists())
+                {
+                    base.Database.Migrate();
+                }
+                else
+                {
+                    throw new Exception("Database already exists.");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
     }
 }
