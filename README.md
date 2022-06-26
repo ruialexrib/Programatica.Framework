@@ -33,4 +33,5 @@ With this framework you focus on developing your business entites and what reall
 
 ### Sample Usage
 
-[Programatica.DummyApp.Mvc](https://github.com/ruialexrib/Programatica.DummyApp.Mvc)
+- [Programatica.DummyApp.Mvc](https://github.com/ruialexrib/Programatica.DummyApp.Mvc)
+- [Programatica.DummyApp.Console](https://github.com/ruialexrib/Programatica.DummyApp.Console)
