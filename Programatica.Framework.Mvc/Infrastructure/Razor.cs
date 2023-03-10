@@ -7,12 +7,8 @@ namespace Programatica.Framework.Mvc.Infrastructure
     {
         public static string Rnd()
         {
-            return ShortId.Generate(new GenerationOptions
-            {
-                UseNumbers = false,
-                UseSpecialCharacters = false,
-                Length = 8
-            });
+            var options = new GenerationOptions(useNumbers: false, useSpecialCharacters: false, length: 8);
+            return ShortId.Generate(options);
         }
 
         public static string GenerateElementId(string prefix)
