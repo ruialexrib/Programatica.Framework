@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
+using Programatica.Framework.Core.Exceptions;
 using Programatica.Framework.Data.Context;
 using Programatica.Framework.Data.Models;
 using System;
@@ -51,7 +51,14 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public IQueryable<T> GetData()
         {
-            return DbSet.AsNoTracking();
+            try
+            {
+                return DbSet.AsNoTracking();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -64,7 +71,14 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public IQueryable<T> GetData(string sql)
         {
-            return DbSet.FromSql<T>(sql);
+            try
+            {
+                return DbSet.FromSqlRaw<T>(sql);
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -77,9 +91,16 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public IQueryable<T> GetData(Func<IQueryable<T>, IQueryable<T>> func)
         {
-            var query = DbSet as IQueryable<T>;
-            IQueryable<T> queryWithEagerLoading = func(query);
-            return queryWithEagerLoading.AsNoTracking();
+            try
+            {
+                var query = DbSet as IQueryable<T>;
+                IQueryable<T> queryWithEagerLoading = func(query);
+                return queryWithEagerLoading.AsNoTracking();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -92,7 +113,14 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate)
         {
-            return DbSet.Where(predicate);
+            try
+            {
+                return DbSet.Where(predicate);
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -105,8 +133,15 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public async Task<IEnumerable<T>> GetDataAsync()
         {
-            return await DbSet.AsNoTracking()
-                              .ToListAsync();
+            try
+            {
+                return await DbSet.AsNoTracking()
+                                  .ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -118,7 +153,14 @@ namespace Programatica.Framework.Data.Repository
         /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="sql"/> is null.</exception>
         public async Task<IEnumerable<T>> GetDataAsync(string sql)
         {
-            return await DbSet.FromSql<T>(sql).ToListAsync();
+            try
+            {
+                return await DbSet.FromSqlRaw<T>(sql).ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -131,9 +173,16 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public async Task<IEnumerable<T>> GetDataAsync(Func<IQueryable<T>, IQueryable<T>> func)
         {
-            var query = DbSet as IQueryable<T>;
-            IQueryable<T> queryWithEagerLoading = func(query);
-            return await queryWithEagerLoading.AsNoTracking().ToListAsync();
+            try
+            {
+                var query = DbSet as IQueryable<T>;
+                IQueryable<T> queryWithEagerLoading = func(query);
+                return await queryWithEagerLoading.AsNoTracking().ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -146,8 +195,15 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public async Task<IEnumerable<T>> GetWhereAsync(Expression<Func<T, bool>> predicate)
         {
-            return await DbSet.Where(predicate)
-                              .ToListAsync();
+            try
+            {
+                return await DbSet.Where(predicate)
+                                  .ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -170,9 +226,9 @@ namespace Programatica.Framework.Data.Repository
                 _context.Entry(entity).State = EntityState.Detached;
                 return entity;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new RepositoryException(e.Message, e);
             }
         }
 
@@ -190,10 +246,16 @@ namespace Programatica.Framework.Data.Repository
         /// </example>
         public async Task<T> GetDataAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
         {
-
-            var entity = DbSet.Where(x => x.Id == id);
-            IQueryable<T> entityWithEagerLoading = func(entity);
-            return await entityWithEagerLoading.AsNoTracking().FirstOrDefaultAsync();
+            try
+            {
+                var entity = DbSet.Where(x => x.Id == id);
+                IQueryable<T> entityWithEagerLoading = func(entity);
+                return await entityWithEagerLoading.AsNoTracking().FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw new RepositoryException(e.Message, e);
+            }
         }
 
         /// <summary>
@@ -212,9 +274,9 @@ namespace Programatica.Framework.Data.Repository
                 DbSet.Add(entity);
                 return await _context.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new RepositoryException(e.Message, e);
             }
         }
 
@@ -245,9 +307,9 @@ namespace Programatica.Framework.Data.Repository
                     return 0;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new RepositoryException(e.Message, e);
             }
         }
 
@@ -271,9 +333,9 @@ namespace Programatica.Framework.Data.Repository
                 _context.Entry(entity).State = EntityState.Modified;
                 return await _context.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new RepositoryException(e.Message, e);
             }
         }
 
@@ -295,9 +357,9 @@ namespace Programatica.Framework.Data.Repository
                 DbSet.Remove(entity);
                 return await _context.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new RepositoryException(e.Message, e);
             }
         }
 

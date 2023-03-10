@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Programatica.Framework.Core.Exceptions;
 using Programatica.Framework.Data.Extensions;
 using Programatica.Framework.Data.Models;
 using System;
@@ -6,15 +7,34 @@ using System.Linq;
 
 namespace Programatica.Framework.Data.Context
 {
+    /// <summary>
+    /// Provides a base implementation for a database context.
+    /// </summary>
     public abstract class BaseDbContext : DbContext, IDbContext
     {
+        /// <summary>
+        /// Gets or sets a DbSet for the audit logs.
+        /// </summary>
         public DbSet<Audit> Audit { get; set; }
+
+        /// <summary>
+        /// Gets or sets a DbSet for the track changes.
+        /// </summary>
         public DbSet<TrackChange> TrackChanges { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the BaseDbContext class with the specified options.
+        /// </summary>
+        /// <param name="options">The options for this context.</param>
         public BaseDbContext(DbContextOptions options) : base(options)
         {
         }
 
+        /// <summary>
+        /// Gets a DbSet for the specified entity type.
+        /// </summary>
+        /// <typeparam name="TModel">The type of entity to retrieve.</typeparam>
+        /// <returns>A DbSet for the specified entity type.</returns>
         DbSet<TModel> IDbContext.Set<TModel>()
         {
             return base.Set<TModel>();
@@ -23,6 +43,7 @@ namespace Programatica.Framework.Data.Context
         /// <summary>
         /// Saves all changes made in this context to the database.
         /// </summary>
+        /// <returns>The number of state entries written to the database.</returns>
         public override int SaveChanges()
         {
             var changeSet = ChangeTracker.Entries();
@@ -40,6 +61,9 @@ namespace Programatica.Framework.Data.Context
             return base.SaveChanges();
         }
 
+        /// <summary>
+        /// Applies any pending migrations for the context to the database.
+        /// </summary>
         public void Migrate()
         {
             var db = base.Database;
@@ -51,14 +75,13 @@ namespace Programatica.Framework.Data.Context
                 }
                 else
                 {
-                    throw new Exception("Database already exists.");
+                    throw new DbContextException("Database already exists.");
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new DbContextException(e.Message, e);
             }
-
         }
     }
 }
