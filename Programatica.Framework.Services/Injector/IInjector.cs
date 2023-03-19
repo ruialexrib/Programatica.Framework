@@ -6,6 +6,11 @@ using System.Collections.Generic;
 
 namespace Programatica.Framework.Services.Injector
 {
+    /// <summary>
+    /// Interface for dependency injection of objects related to a model, including repository, date/time adapter, authentication adapter,
+    /// JSON serializer adapter, and event handlers.
+    /// </summary>
+    /// <typeparam name="T">The model type.</typeparam>
     public interface IInjector<T>
         where T : IModel
     {

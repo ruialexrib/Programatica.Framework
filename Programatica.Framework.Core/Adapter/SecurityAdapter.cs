@@ -3,8 +3,14 @@ using System.Linq;
 
 namespace Programatica.Framework.Core.Adapter
 {
+    /// <summary>
+    /// Provides methods to evaluate password strength and enforce password policies.
+    /// </summary>
     public class SecurityAdapter : ISecurityAdapter
     {
+        /// <summary>
+        /// Initializes a new instance of the SecurityAdapter class.
+        /// </summary>
         public SecurityAdapter() : base()
         { }
 
@@ -12,8 +18,9 @@ namespace Programatica.Framework.Core.Adapter
         /// Generic method to retrieve password strength: use this for general purpose scenarios, 
         /// i.e. when you don't have a strict policy to follow.
         /// </summary>
-        /// <param name="password"></param>
-        /// <returns></returns>
+        /// <param name="password">The password to be evaluated.</param>
+        /// <returns>The strength of the password as a value of the PasswordStrength enum.</returns>
+
         public PasswordStrength GetPasswordStrength(string password)
         {
             int score = 0;
@@ -33,7 +40,7 @@ namespace Programatica.Framework.Core.Adapter
         /// - at least one LC letter
         /// - at least one non-letter char (digit OR special char)
         /// </summary>
-        /// <returns></returns>
+        /// <returns>True if the password meets the criteria for a strong password, false otherwise</returns>
         public bool IsStrongPassword(string password)
         {
             return HasMinimumLength(password, 8)
@@ -46,6 +53,7 @@ namespace Programatica.Framework.Core.Adapter
         /// <summary>
         /// Sample password policy implementation following the Microsoft.AspNetCore.Identity.PasswordOptions standard.
         /// </summary>
+        /// <returns>Returns true if the password meets the specified criteria, otherwise false.</returns>
         public bool IsValidPassword(
             string password,
             int requiredLength,
@@ -66,10 +74,23 @@ namespace Programatica.Framework.Core.Adapter
 
         #region Helper Methods
 
+        /// <summary>
+        /// Determines if a given password meets the minimum length requirement.
+        /// </summary>
+        /// <param name="password">The password to be checked.</param>
+        /// <param name="minLength">The minimum length required for the password.</param>
+        /// <returns>True if the password meets the minimum length requirement, false otherwise.</returns>
         public bool HasMinimumLength(string password, int minLength)
         {
             return password.Length >= minLength;
         }
+
+        /// <summary>
+        /// Checks if the password has a minimum number of unique characters.
+        /// </summary>
+        /// <param name="password">The password to check.</param>
+        /// <param name="minUniqueChars">The minimum number of unique characters the password must have.</param>
+        /// <returns>True if the password has at least the minimum number of unique characters, false otherwise.</returns>
 
         public bool HasMinimumUniqueChars(string password, int minUniqueChars)
         {
@@ -77,8 +98,10 @@ namespace Programatica.Framework.Core.Adapter
         }
 
         /// <summary>
-        /// Returns TRUE if the password has at least one digit
+        /// Returns TRUE if the password has at least one digit.
         /// </summary>
+        /// <param name="password">The password string to check.</param>
+        /// <returns>TRUE if the password has at least one digit; otherwise, FALSE.</returns>
         public bool HasDigit(string password)
         {
             return password.Any(c => char.IsDigit(c));
@@ -87,6 +110,8 @@ namespace Programatica.Framework.Core.Adapter
         /// <summary>
         /// Returns TRUE if the password has at least one special character
         /// </summary>
+        /// <param name="password">The password to check for special characters</param>
+        /// <returns>True if the password has at least one special character, False otherwise</returns>
         public bool HasSpecialChar(string password)
         {
             // return password.Any(c => char.IsPunctuation(c)) || password.Any(c => char.IsSeparator(c)) || password.Any(c => char.IsSymbol(c));
@@ -96,6 +121,8 @@ namespace Programatica.Framework.Core.Adapter
         /// <summary>
         /// Returns TRUE if the password has at least one uppercase letter
         /// </summary>
+        /// <param name="password">The password to check.</param>
+        /// <returns>True if the password has at least one uppercase letter; otherwise, false.</returns>
         public bool HasUpperCaseLetter(string password)
         {
             return password.Any(c => char.IsUpper(c));
@@ -104,6 +131,8 @@ namespace Programatica.Framework.Core.Adapter
         /// <summary>
         /// Returns TRUE if the password has at least one lowercase letter
         /// </summary>
+        /// <param name="password">The password string to check</param>
+        /// <returns>A boolean indicating whether the password has at least one lowercase 
         public bool HasLowerCaseLetter(string password)
         {
             return password.Any(c => char.IsLower(c));
