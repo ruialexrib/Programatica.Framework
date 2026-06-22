@@ -25,12 +25,6 @@ namespace Programatica.Framework.Core.Adapter
         }
 
         /// <summary>
-        /// Gets the password of the authenticated user.
-        /// </summary>
-        public string Password
-        { get; }
-
-        /// <summary>
         /// Gets the type of authentication used for the authenticated user.
         /// </summary>
         public string AuthenticationType

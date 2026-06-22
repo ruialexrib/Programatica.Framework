@@ -13,11 +13,6 @@ namespace Programatica.Framework.Core.Adapter
         string Name { get; }
 
         /// <summary>
-        /// Gets the password of the authenticated user.
-        /// </summary>
-        string Password { get; }
-
-        /// <summary>
         /// Gets the authentication type of the authenticated user.
         /// </summary>
         string AuthenticationType { get; }

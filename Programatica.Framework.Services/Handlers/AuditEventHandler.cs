@@ -170,8 +170,8 @@ namespace Programatica.Framework.Services.Handlers
                 {
                     AuditId = auditId,
                     FieldName = change.Prop,
-                    OldValue = change.valB.ToString(),
-                    NewValue = change.valA.ToString()
+                    OldValue = change.valB?.ToString(),
+                    NewValue = change.valA?.ToString()
                 });
             }
             return changes;

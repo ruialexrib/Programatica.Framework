@@ -757,21 +757,19 @@
   },
   "packageFolders": {
     "C:\\Users\\ruiribeiro\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "7.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "projectName": "Programatica.Framework.Services",
-      "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
+      "projectPath": "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Services\\Programatica.Framework.Services.csproj",
       "packagesPath": "C:\\Users\\ruiribeiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Services\\obj\\",
+      "outputPath": "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\ruiribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -783,18 +781,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\ruiribeiro\\AppData\\Local\\Esri\\NuGet": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
+            "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Core\\Programatica.Framework.Core.csproj"
             },
-            "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
-              "projectPath": "C:\\Users\\ruiribeiro\\Documents\\GitHub\\Programatica.Framework\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
+            "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj": {
+              "projectPath": "C:\\Users\\ruiribeiro\\.copilot\\repos\\copilot-worktrees\\Programatica.Framework\\ruialexrib-fantastic-guide\\Programatica.Framework.Data\\Programatica.Framework.Data.csproj"
             }
           }
         }
@@ -803,7 +800,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net7.0": {
@@ -824,7 +827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

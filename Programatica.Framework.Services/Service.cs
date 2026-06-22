@@ -24,286 +24,159 @@ namespace Programatica.Framework.Services
 
         public async Task<T> CreateAsync(T model)
         {
-            try
+            model.CreatedDate = _injector.DateTimeAdapter.UtcNow;
+            model.CreatedUser = _injector.AuthUserAdapter.Name;
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                model.CreatedDate = _injector.DateTimeAdapter.UtcNow;
-                model.CreatedUser = _injector.AuthUserAdapter.Name;
-
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeCreatingAsync(model);
-                }
-
-                await _injector.TRepository.InsertAsync(model);
-
-                // handle after events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnAfterCreatedAsync(model);
-                }
-
-                return model;
+                await handler.OnBeforeCreatingAsync(model);
             }
-            catch (Exception)
+
+            await _injector.TRepository.InsertAsync(model);
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnAfterCreatedAsync(model);
             }
+
+            return model;
         }
 
         public async Task<T> ModifyAsync(T model)
         {
-            try
+            model.LastModifiedDate = _injector.DateTimeAdapter.UtcNow;
+            model.LastModifiedUser = _injector.AuthUserAdapter.Name;
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                model.LastModifiedDate = _injector.DateTimeAdapter.UtcNow;
-                model.LastModifiedUser = _injector.AuthUserAdapter.Name;
-
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeModifyingAsync(model);
-                }
-
-                await _injector.TRepository.UpdateAsync(model);
-
-                // handle after events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnAfterModifiedAsync(model);
-                }
-
-                return model;
+                await handler.OnBeforeModifyingAsync(model);
             }
-            catch (Exception)
+
+            await _injector.TRepository.UpdateAsync(model);
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnAfterModifiedAsync(model);
             }
+
+            return model;
         }
 
         public async Task DeleteAsync(int id)
         {
-            try
+            T record = await _injector.TRepository.GetDataAsync(id);
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                T record = await _injector.TRepository.GetDataAsync(id);
-
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeDeletingAsync(record);
-                }
-
-                await _injector.TRepository.DeleteAsync(record);
-
-                // handle after events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnAfterDeletedAsync(record);
-                }
+                await handler.OnBeforeDeletingAsync(record);
             }
-            catch (Exception)
+
+            await _injector.TRepository.DeleteAsync(record);
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnAfterDeletedAsync(record);
             }
         }
 
         public async Task DestroyAsync(int id)
         {
-            try
+            T record = await _injector.TRepository.GetDataAsync(id);
+
+            record.LastDestroyedDate = _injector.DateTimeAdapter.UtcNow;
+            record.LastDestroyedUser = _injector.AuthUserAdapter.Name;
+            record.IsDestroyed = true;
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                T record = await _injector.TRepository.GetDataAsync(id);
-
-                record.LastDestroyedDate = _injector.DateTimeAdapter.UtcNow;
-                record.LastDestroyedUser = _injector.AuthUserAdapter.Name;
-                record.IsDestroyed = true;
-
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeDestroyingAsync(record);
-                }
-
-                await _injector.TRepository.UpdateAsync(record);
-
-                // handle after events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnAfterDestroyedAsync(record);
-                }
+                await handler.OnBeforeDestroyingAsync(record);
             }
-            catch (Exception)
+
+            await _injector.TRepository.UpdateAsync(record);
+
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnAfterDestroyedAsync(record);
             }
         }
 
         public async Task<IEnumerable<T>> GetAsync(IQueryable<T> query)
         {
-            var result = await query.ToListAsync();
-            return result;
+            return await query.ToListAsync();
         }
 
         public async Task<T> GetAsync(int id)
         {
-            try
-            {
-                var result = await _injector.TRepository.GetDataAsync(id);
-                return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetDataAsync(id);
         }
 
         public async Task<T> GetAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
         {
-            try
-            {
-                var result = await _injector.TRepository.GetDataAsync(id, func);
-                return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetDataAsync(id, func);
         }
 
         public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> predicate)
         {
-            try
-            {
-                var result = await _injector.TRepository.GetWhereAsync(predicate);
-                return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetWhereAsync(predicate);
         }
 
         public async Task<IEnumerable<T>> GetAsync()
         {
-            try
-            {
-                return await _injector.TRepository.GetDataAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetDataAsync();
         }
 
         public async Task<IEnumerable<T>> GetAsync(string sql)
         {
-            try
-            {
-                return await _injector.TRepository.GetDataAsync(sql);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetDataAsync(sql);
         }
 
         public async Task<IEnumerable<T>> GetAsync(Func<IQueryable<T>, IQueryable<T>> func)
         {
-            try
-            {
-                return await _injector.TRepository.GetDataAsync(func);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return await _injector.TRepository.GetDataAsync(func);
         }
 
         public IQueryable<T> Get()
         {
-            try
-            {
-                return _injector.TRepository.GetData();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return _injector.TRepository.GetData();
         }
 
         public IQueryable<T> Get(string sql)
         {
-            try
-            {
-                return _injector.TRepository.GetData(sql);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return _injector.TRepository.GetData(sql);
         }
 
         public IQueryable<T> Get(Func<IQueryable<T>, IQueryable<T>> func)
         {
-            try
-            {
-                return _injector.TRepository.GetData(func);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return _injector.TRepository.GetData(func);
         }
 
         public IQueryable<T> Get(Expression<Func<T, bool>> predicate)
         {
-            try
-            {
-                var result = _injector.TRepository.GetWhere(predicate);
-                return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return _injector.TRepository.GetWhere(predicate);
         }
 
         public async Task<T> InspectAsync(int id)
         {
-            try
-            {
-                var result = await _injector.TRepository.GetDataAsync(id);
+            var result = await _injector.TRepository.GetDataAsync(id);
 
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeInspectingAsync(result);
-                }
-
-                return result;
-            }
-            catch (Exception)
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnBeforeInspectingAsync(result);
             }
+
+            return result;
         }
 
         public async Task<T> InspectAsync(int id, Func<IQueryable<T>, IQueryable<T>> func)
         {
-            try
-            {
-                var result = await _injector.TRepository.GetDataAsync(id, func);
+            var result = await _injector.TRepository.GetDataAsync(id, func);
 
-                // handle before events  
-                foreach (IEventHandler<T> handler in _injector.EventHandlers)
-                {
-                    await handler.OnBeforeInspectingAsync(result);
-                }
-
-                return result;
-            }
-            catch (Exception)
+            foreach (IEventHandler<T> handler in _injector.EventHandlers)
             {
-                throw;
+                await handler.OnBeforeInspectingAsync(result);
             }
+
+            return result;
         }
 
         #endregion IService<T>

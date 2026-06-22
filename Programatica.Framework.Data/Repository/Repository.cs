@@ -115,7 +115,7 @@ namespace Programatica.Framework.Data.Repository
         {
             try
             {
-                return DbSet.Where(predicate);
+                return DbSet.Where(predicate).AsNoTracking();
             }
             catch (Exception e)
             {
@@ -219,12 +219,9 @@ namespace Programatica.Framework.Data.Repository
         {
             try
             {
-                var entity = await DbSet.Where(x => x.Id == id)
-                                        .AsNoTracking()
-                                        .FirstOrDefaultAsync();
-
-                _context.Entry(entity).State = EntityState.Detached;
-                return entity;
+                return await DbSet.Where(x => x.Id == id)
+                                  .AsNoTracking()
+                                  .FirstOrDefaultAsync();
             }
             catch (Exception e)
             {

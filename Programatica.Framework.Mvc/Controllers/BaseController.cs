@@ -24,7 +24,7 @@ namespace Programatica.Framework.Mvc.Controllers
         public override void OnActionExecuting(ActionExecutingContext ctx)
         {
             base.OnActionExecuting(ctx);
-            StartTime = DateTime.Now;
+            StartTime = DateTime.UtcNow;
         }
 
         public override void OnActionExecuted(ActionExecutedContext context)
@@ -38,7 +38,7 @@ namespace Programatica.Framework.Mvc.Controllers
             TempData["ControllerName"] = context.RouteData.Values["controller"].ToString();
             TempData["ControllerAction"] = context.RouteData.Values["action"].ToString();
 
-            var mls = DateTime.Now - this.StartTime;
+            var mls = DateTime.UtcNow - this.StartTime;
             TempData["ElapsedTime"] = mls.Milliseconds.ToString();
         }
 
